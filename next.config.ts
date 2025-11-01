@@ -138,7 +138,7 @@ pathname: '/**',
         pathname: '/**',
       },
       {
-        protocol: 'https| |',
+        protocol: 'https',
         hostname: 'www.zimbabwesituation.com',
         port: '',
         pathname: '/**',
