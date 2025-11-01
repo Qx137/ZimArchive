@@ -19,8 +19,9 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'upload.wikimedia.org' },
       { protocol: 'https', hostname: 's3-eu-west-2.amazonaws.com' },
       { protocol: 'https', hostname: 'i0.wp.com' },
+      { protocol: 'https', hostname: 'cdn.britannica.com' },
       
-      // News & Media Outlets (Consolidated)
+      // News & Media Outlets
       { protocol: 'https', hostname: '**.aljazeera.com' },
       { protocol: 'https', hostname: '**.twimg.com' },
       { protocol: 'https', hostname: '**.pindula.co.zw' },
@@ -45,28 +46,27 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'masvingomirror.com' },
       { protocol: 'https', hostname: 'insiderzim.com' },
       { protocol: 'https', hostname: 'startupbiz.co.zw' },
-      
-      // Organizational & Other
-      { protocol: 'https', hostname: 'www.tandfonline.com' },
-      { protocol: 'https', hostname: 'www.english.ox.ac.uk' },
-      { protocol: 'https', hostname: 'www.colonialrelic.com' },
-      { protocol: 'https', hostname: 'static.wixstatic.com' },
-      { protocol: 'https', hostname: 'www.victoriafalls-guide.net' },
-      { protocol: 'https', hostname: 'cdn.britannica.com' },
-      { protocol: 'https', hostname: 'www.dandaro.online' },
       { protocol: 'https', hostname: 'cite.org.zw' },
+
+      // Other
+      { protocol: 'https', hostname: '**.tandfonline.com' },
+      { protocol: 'https', hostname: '**.english.ox.ac.uk' },
+      { protocol: 'https', hostname: '**.colonialrelic.com' },
+      { protocol: 'https', hostname: 'static.wixstatic.com' },
+      { protocol: 'https', hostname: '**.victoriafalls-guide.net' },
+      { protocol: 'https', hostname: '**.dandaro.online' },
       { protocol: 'https', hostname: 'images.routledge.com' },
       { protocol: 'https', hostname: 'omo-oss-image.thefastimg.com' },
       { protocol: 'https', hostname: 'hurumende.com' },
       { protocol: 'https', hostname: 'zimbabweanpatriot.co.zw' },
-      { protocol: 'https', hostname: 'www.boell.de' },
+      { protocol: 'https', hostname: '**.boell.de' },
       { protocol: 'https', hostname: 'zanupf.org.zw' },
       { protocol: 'https', hostname: 'resa.aero' },
-      { protocol: 'https', hostname: 'www.acz.co.zw' },
-      { protocol: 'https', hostname: 'www.infomin.org.zw' },
-      { protocol: 'https', hostname: 'www.freightnews.co.za' },
+      { protocol: 'https', hostname: '**.acz.co.zw' },
+      { protocol: 'https', hostname: '**.infomin.org.zw' },
+      { protocol: 'https', hostname: '**.freightnews.co.za' },
       { protocol: 'https', hostname: 'apta.biz' },
-      { protocol: 'https', hostname: 'www.hit.ac.zw' },
+      { protocol: 'https', hostname: '**.hit.ac.zw' },
     ],
   },
 };
