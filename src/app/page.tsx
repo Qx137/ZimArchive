@@ -8,6 +8,7 @@ import Link from "next/link";
 import { ZimbabweBirdIcon } from "@/components/icons/zimbabwe-bird";
 import { useImages } from "@/hooks/use-images";
 import heroMainImage from "@/img/hero-main.jpg";
+import trabyImage from "@/img/traby.jpeg";
 
 const featureCardsData = [
   {
@@ -83,7 +84,10 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {featureCardsData.map((feature) => {
-              const featureImage = images?.find(img => img.id === feature.imageId);
+              const featureImage = feature.imageId === 'hero-achievements' 
+                ? { imageUrl: trabyImage, altText: "Modern infrastructure project.", imageHint: "modern infrastructure" }
+                : images?.find(img => img.id === feature.imageId);
+              
               return (
                 <Link href={feature.href} key={feature.title} className="group">
                   <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 border-primary/20">
