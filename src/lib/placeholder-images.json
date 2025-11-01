@@ -3,7 +3,7 @@
     {
       "id": "hero-main",
       "description": "A majestic view of the Zimbabwe landscape at sunrise.",
-      "imageUrl": "https://images.unsplash.com/photo-1708476146651-b66d704f643c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxaaW1iYWJ3ZSUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NjE5OTE1NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1558013533-a3b555e3a890?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxaaW1iYWJ3ZSUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NjIxMjI3MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Zimbabwe landscape"
     },
     {
@@ -14,9 +14,9 @@
     },
     {
       "id": "hero-achievements",
-      "description": "A modern cityscape with new buildings under construction.",
-      "imageUrl": "https://images.unsplash.com/photo-1567449303183-ae0d6ed1498e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjBjaXR5fGVufDB8fHx8MTc2MTk0ODA1OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern city"
+      "description": "The newly constructed Beitbridge border post.",
+      "imageUrl": "https://images.unsplash.com/photo-1629089299103-f3659f14d84f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxab2Rlcm4lMjBpbmZyYXN0cnVjdHVyZXxlbnwwfHx8fDE3NjIxMjI4MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern infrastructure"
     },
     {
       "id": "hero-history",
@@ -32,81 +32,81 @@
     },
     {
       "id": "gallery-1",
-      "description": "President giving a speech at a podium.",
-      "imageUrl": "https://images.unsplash.com/photo-1761001826702-1e2b20a32507?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBzcGVlY2h8ZW58MHx8fHwxNzYxOTkxNTQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "President giving a speech at a podium with the national flag.",
+      "imageUrl": "https://images.unsplash.com/photo-1609051336245-eac70fc7bac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBzcGVlY2h8ZW58MHx8fHwxNzYxOTkxNTQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "political speech"
     },
     {
       "id": "gallery-2",
-      "description": "President meeting with foreign dignitaries.",
-      "imageUrl": "https://images.unsplash.com/photo-1713930517076-18a9fd284cfb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxvZmZpY2lhbCUyMG1lZXRpbmd8ZW58MHx8fHwxNzYxOTkxNTUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "official meeting"
+      "description": "President meeting with international investors for a mining deal.",
+      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzYyMTIyOTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business meeting"
     },
     {
       "id": "gallery-3",
-      "description": "President cutting a ribbon at an inauguration ceremony.",
-      "imageUrl": "https://images.unsplash.com/photo-1692175478166-377d3f03a31a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8b3BlbmluZyUyMGNlcmVtb255fGVufDB8fHx8MTc2MTk5MTU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "opening ceremony"
+      "description": "President launching a new road construction project.",
+      "imageUrl": "https://images.unsplash.com/photo-1520986639249-3c82700a0624?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2FkJTIwY29uc3RydWN0aW9ufGVufDB8fHx8MTc2MjEyMjk2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "road construction"
     },
     {
       "id": "gallery-4",
-      "description": "A large crowd at a party rally.",
-      "imageUrl": "https://images.unsplash.com/photo-1713311355069-0b8abc670009?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwb2xpdGljYWwlMjByYWxseXxlbnwwfHx8fDE3NjE5ODA2OTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A large crowd at a ZANU-PF rally.",
+      "imageUrl": "https://images.unsplash.com/photo-1589463313938-333ed89c7217?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjByYWxseXxlbnwwfHx8fDE3NjE5ODA2OTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "political rally"
     },
     {
       "id": "gallery-5",
-      "description": "President visiting a newly built school.",
-      "imageUrl": "https://images.unsplash.com/photo-1660351174962-e2a1fbb9af09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzY2hvb2wlMjB2aXNpdHxlbnwwfHx8fDE3NjE5MjkzNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "school visit"
+      "description": "President visiting a newly equipped hospital wing.",
+      "imageUrl": "https://images.unsplash.com/photo-1538108144229-07b463337906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob3NwaXRhbCUyMHdhcmR8ZW58MHx8fHwxNzYyMTIzMDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hospital ward"
     },
     {
       "id": "gallery-6",
-      "description": "President shaking hands with a farmer.",
-      "imageUrl": "https://images.unsplash.com/photo-1553073520-80b5ad5ec870?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29tbXVuaXR5JTIwZW5nYWdlbWVudHxlbnwwfHx8fDE3NjE5MTY1MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "community engagement"
+      "description": "President inspecting a farm during the Pfumvudza/Intwasa program launch.",
+      "imageUrl": "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYXJtJTIwaW5zcGVjdGlvbnxlbnwwfHx8fDE3NjIxMjMwODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "farm inspection"
     },
     {
       "id": "gallery-7",
-      "description": "A new infrastructure project like a bridge or dam.",
-      "imageUrl": "https://images.unsplash.com/photo-1708357997379-e55c1636e0d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxpbmZyYXN0cnVjdHVyZSUyMHByb2plY3R8ZW58MHx8fHwxNzYxOTkxNTQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "infrastructure project"
+      "description": "The new Robert Gabriel Mugabe International Airport terminal.",
+      "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhirportJTIwdGVybWluYWx8ZW58MHx8fHwxNzYyMTIzMTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "airport terminal"
     },
     {
       "id": "gallery-8",
-      "description": "Vintage photo of early party members.",
-      "imageUrl": "https://images.unsplash.com/photo-1576666735169-62fbfbf35717?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aGlzdG9yaWNhbCUyMGdyb3VwfGVufDB8fHx8MTc2MTk5MTU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "historical group"
+      "description": "Graduation ceremony at a state university with new innovation hubs.",
+      "imageUrl": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzYyMTIzMTU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "graduation ceremony"
     },
     {
       "id": "gallery-9",
-      "description": "President waving from a car during a parade.",
-      "imageUrl": "https://images.unsplash.com/photo-1609051336245-eac70fc7bac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxvZmZpY2lhbCUyMHBhcmFkZXxlbnwwfHx8fDE3NjE5OTE1NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "official parade"
+      "description": "President at the launch of the National Development Strategy 1 (NDS1).",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGxhdW5jaHxlbnwwfHx8fDE3NjIxMjMxODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business launch"
     },
     {
       "id": "history-origins",
-      "description": "An archival document with an official seal.",
-      "imageUrl": "https://images.unsplash.com/photo-1760822600750-0bc72f1fad9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aGlzdG9yaWNhbCUyMGRvY3VtZW50fGVufDB8fHx8MTc2MTkyODg1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "An archival document detailing the formation of ZANU in 1963.",
+      "imageUrl": "https://images.unsplash.com/photo-1583445395064-9628a43e4986?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaXN0b3JpY2FsJTIwZG9jdW1lbnR8ZW58MHx8fHwxNzYxOTI4ODU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "historical document"
     },
     {
       "id": "key-figure-1",
-      "description": "Portrait of a historical political figure.",
-      "imageUrl": "https://images.unsplash.com/photo-1580893472468-01373fe4c97e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3J0cmFpdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjE5NDgzMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "portrait person"
+      "description": "A portrait of Robert Mugabe, a key figure in Zimbabwe's history.",
+      "imageUrl": "https://images.unsplash.com/photo-1609188737575-de6f9a421e42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG9mJTIwYW4lMjBhZnJpY2FuJTIwbGVhZGVyfGVufDB8fHx8MTc2MjEyMzI4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portrait leader"
     },
     {
       "id": "key-figure-2",
-      "description": "Portrait of another historical political figure.",
-      "imageUrl": "https://images.unsplash.com/photo-1552699611-e2c208d5d9cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3J0cmFpdCUyMHdvbWFufGVufDB8fHx8MTc2MTk3NzA3NXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "portrait woman"
+      "description": "A portrait of Joshua Nkomo, known as 'Father Zimbabwe'.",
+      "imageUrl": "https://images.unsplash.com/photo-1610212595059-3b69a25f4a7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG9mJTIwYW4lMjBlbGRlcmx5JTIwYWZyaWNhbiUyMG1hbnxlbnwwfHx8fDE3NjIxMjMzMTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portrait elder"
     },
     {
       "id": "key-figure-3",
-      "description": "Portrait of a third historical political figure.",
-      "imageUrl": "https://images.unsplash.com/photo-1656338997878-279d71d48f6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3J0cmFpdCUyMG1hbnxlbnwwfHx8fDE3NjE5ODI5OTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "portrait man"
+      "description": "A portrait of Herbert Chitepo, a nationalist leader.",
+      "imageUrl": "https://images.unsplash.com/photo-1580893472468-01373fe4c97e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3J0cmFpdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjE5NDgzMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portrait person"
     }
   ]
 }

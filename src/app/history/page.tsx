@@ -4,9 +4,9 @@ import { BookOpen, Users, Milestone } from "lucide-react";
 import Image from "next/image";
 
 const keyFigures = [
-    { name: "Founding Father 1", imageId: "key-figure-1", description: "A visionary leader who was instrumental in the party's formation and early ideology." },
-    { name: "Founding Mother 2", imageId: "key-figure-2", description: "A key strategist and mobilizer during the liberation struggle, championing unity and progress." },
-    { name: "Ideological Architect 3", imageId: "key-figure-3", description: "Shaped the core principles of the party, focusing on self-determination and economic empowerment." },
+    { name: "Robert Mugabe", imageId: "key-figure-1", description: "A founding father and the first leader of Zimbabwe, serving as Prime Minister and later as President from 1980 to 2017." },
+    { name: "Joshua Nkomo", imageId: "key-figure-2", description: "Leader of the Zimbabwe African People's Union (ZAPU) and a key figure in the liberation struggle, who later became Vice President after the Unity Accord." },
+    { name: "Herbert Chitepo", imageId: "key-figure-3", description: "The first black citizen of Rhodesia to become a barrister, he was a leading nationalist who led ZANU until his assassination in 1975." },
 ];
 
 export default function HistoryPage() {
@@ -32,7 +32,7 @@ export default function HistoryPage() {
                                     <h2 className="text-3xl md:text-4xl font-headline text-primary">The Origins</h2>
                                 </div>
                                 <p className="font-body text-muted-foreground leading-relaxed mt-4">
-                                    The party was forged in the crucible of the liberation struggle, born from a collective desire for sovereignty, freedom, and justice. Its foundations were laid by nationalist pioneers who envisioned a unified and prosperous Zimbabwe, free from the shackles of colonialism. The core ideology centered on land reform, economic independence, and majority rule, principles that mobilized millions and continue to guide the party's mission.
+                                    The Zimbabwe African National Union (ZANU) was formed in 1963 as a breakaway from the Zimbabwe African People's Union (ZAPU), led by Ndabaningi Sithole, Herbert Chitepo, and Robert Mugabe. The party was forged in the crucible of the liberation struggle, advocating for a more militant approach to ending white minority rule. Its core ideology centered on national sovereignty, land reclamation, and socialist principles, which guided its mission to establish an independent Zimbabwe.
                                 </p>
                             </div>
                             <div className="relative min-h-[300px] md:min-h-full">
@@ -97,11 +97,11 @@ export default function HistoryPage() {
                         </p>
                     </div>
                     <ul className="space-y-4 max-w-3xl mx-auto">
-                        <li className="p-4 bg-card border-l-4 border-accent shadow-md"><strong>1963:</strong> Formation of the party, uniting various nationalist movements under a single banner.</li>
-                        <li className="p-4 bg-card border-l-4 border-accent shadow-md"><strong>1980:</strong> Victory in the first democratic elections and the attainment of Zimbabwe's independence.</li>
-                        <li className="p-4 bg-card border-l-4 border-accent shadow-md"><strong>1987:</strong> The Unity Accord is signed, creating a more unified and stable political landscape.</li>
-                        <li className="p-4 bg-card border-l-4 border-accent shadow-md"><strong>2000:</strong> The Fast Track Land Reform Programme is initiated to address historical land imbalances.</li>
-                        <li className="p-4 bg-card border-l-4 border-accent shadow-md"><strong>2017:</strong> A new dispensation begins, focusing on economic renewal and international re-engagement.</li>
+                        <li className="p-4 bg-card border-l-4 border-accent shadow-md"><strong>1963:</strong> Formation of ZANU in Highfield, Salisbury (now Harare), by founding members including Ndabaningi Sithole.</li>
+                        <li className="p-4 bg-card border-l-4 border-accent shadow-md"><strong>1980:</strong> ZANU wins a landslide victory in the first universal suffrage elections, leading to Zimbabwe's independence.</li>
+                        <li className="p-4 bg-card border-l-4 border-accent shadow-md"><strong>1987:</strong> The Unity Accord is signed between ZANU and ZAPU, merging to form ZANU-PF and creating a de facto one-party state.</li>
+                        <li className="p-4 bg-card border-l-4 border-accent shadow-md"><strong>2000:</strong> The Fast-Track Land Reform Programme is launched to redistribute land from the white minority to the black majority.</li>
+                        <li className="p-4 bg-card border-l-4 border-accent shadow-md"><strong>2017:</strong> A new dispensation begins as Emmerson Mnangagwa assumes the presidency, emphasizing economic reform and international re-engagement.</li>
                     </ul>
                 </section>
             </div>

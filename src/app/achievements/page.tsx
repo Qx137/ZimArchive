@@ -4,22 +4,22 @@ import { DollarSign, GraduationCap, HeartPulse } from "lucide-react";
 
 const achievements = {
   economy: [
-    { title: "Economic Stabilization", description: "Implemented key reforms to stabilize the currency and control inflation, creating a more predictable economic environment for businesses and citizens." },
-    { title: "Infrastructure Development", description: "Launched major infrastructure projects, including road rehabilitation, dam construction, and power generation upgrades to support economic growth." },
-    { title: "'Zimbabwe is Open for Business'", description: "Spearheaded a global engagement drive to attract foreign direct investment, resulting in new ventures in mining, agriculture, and manufacturing." },
-    { title: "Mining Sector Growth", description: "Facilitated significant investments in the mining sector, aiming to create a US$12 billion mining industry by expanding exploration and production." },
+    { title: "National Development Strategy 1 (NDS1)", description: "Launched the NDS1, a five-year economic blueprint aimed at achieving an upper-middle-income economy by 2030 through inclusive growth and sustainable development." },
+    { title: "Infrastructure Development", description: "Spearheaded major infrastructure projects including the rehabilitation of the Beitbridge-Harare-Chirundu highway, expansion of the Robert Gabriel Mugabe International Airport, and construction of the Gwayi-Shangani Dam." },
+    { title: "'Zimbabwe is Open for Business'", description: "Championed a global engagement drive to attract foreign direct investment, resulting in new ventures in mining (lithium, platinum), agriculture, and energy sectors." },
+    { title: "Currency and Economic Stabilization", description: "Implemented various fiscal and monetary policy reforms aimed at stabilizing the local currency and curbing inflation, including the introduction of the ZiG currency." },
   ],
   education: [
-    { title: "Education 5.0", description: "Championed the Education 5.0 model, transforming higher education to focus on innovation, industrialization, and problem-solving for national development." },
-    { title: "Innovation Hubs", description: "Established innovation hubs at state universities to nurture student-led startups and commercialize research, linking academia with industry." },
-    { title: "Basic Education Support", description: "Increased support for basic education through school construction, textbook provision, and programs aimed at improving literacy and numeracy rates." },
-    { title: "Teacher Welfare", description: "Initiated programs to improve the welfare and working conditions of teachers, recognizing their crucial role in national development." },
+    { title: "Education 5.0", description: "Championed the Education 5.0 model in higher and tertiary education, focusing on teaching, research, community service, innovation, and industrialization to produce relevant, problem-solving graduates." },
+    { title: "Innovation Hubs and Industrial Parks", description: "Established innovation hubs and industrial parks at state universities to nurture student-led startups, promote research, and commercialize new technologies." },
+    { title: "Basic Education Support", description: "Rolled out the Free Primary Education policy and provided grants for school infrastructure development, textbook provision, and ICT equipment to improve access and quality." },
+    { title: "Science and Technology Focus", description: "Promoted STEM education through the construction of specialized schools and providing resources to foster a new generation of scientists and innovators." },
   ],
   health: [
-    { title: "Healthcare Infrastructure Upgrade", description: "Oversaw the construction and refurbishment of hospitals and clinics across the country to improve access to quality healthcare for all." },
-    { title: "Pharmaceutical Production", description: "Promoted local production of essential medicines and medical supplies to reduce reliance on imports and ensure availability." },
-    { title: "Pandemic Response", description: "Led a comprehensive national response to the COVID-19 pandemic, including successful vaccination campaigns and strengthening of the public health system." },
-    { title: "Primary Healthcare Expansion", description: "Focused on expanding primary healthcare services, particularly in rural areas, to ensure early diagnosis and treatment of common ailments." },
+    { title: "Healthcare Infrastructure Upgrade", description: "Oversaw the construction and refurbishment of hospitals and clinics nationwide, including the provision of modern medical equipment to improve access to quality healthcare." },
+    { title: "Local Pharmaceutical Production", description: "Promoted local production of essential medicines and medical supplies, with companies like Varichem and CAPS Pharmaceuticals increasing their manufacturing capacity." },
+    { title: "Pandemic Response and Vaccination", description: "Led a comprehensive national response to the COVID-19 pandemic, achieving one of Africa's highest vaccination rates through a multi-pronged procurement and distribution strategy." },
+    { title: "Presidential He-Goat Scheme", description: "Launched a nationwide livestock program to improve rural household nutrition and income by distributing goats, promoting food security at a local level." },
   ],
 };
 

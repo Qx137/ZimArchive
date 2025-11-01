@@ -5,42 +5,42 @@ const timelineData = [
   {
     year: "1942",
     title: "Birth and Early Life",
-    description: "Born in Zvishavane, his early years were marked by a strong educational foundation and burgeoning political consciousness.",
+    description: "Born in Zvishavane, his early years in a rural setting were shaped by a strong work ethic and a growing awareness of the political landscape.",
   },
   {
-    year: "1960s",
-    title: "Political Activism and Imprisonment",
-    description: "Became actively involved in the liberation struggle against colonial rule. Was arrested and imprisoned for his activities.",
+    year: "1960s-70s",
+    title: "Political Activism and Liberation Struggle",
+    description: "Joined the nationalist movement, receiving military training in China and Egypt. Became a key figure in the liberation war as a member of the Zimbabwe African National Liberation Army (ZANLA).",
   },
   {
     year: "1977",
     title: "Special Assistant to the President",
-    description: "Became a key figure in the party, serving as a special assistant and demonstrating his leadership capabilities.",
+    description: "Appointed as Special Assistant to ZANU leader Robert Mugabe, becoming one of his most trusted aides and a key strategist during the Lancaster House talks.",
   },
   {
     year: "1980",
     title: "Minister of State Security",
-    description: "Following Zimbabwe's independence, he was appointed to a critical cabinet position, overseeing national security.",
+    description: "Following Zimbabwe's independence, he was appointed as the first Minister of State Security, a critical role in the new government.",
   },
   {
-    year: "2000s",
+    year: "1988-2017",
     title: "Various Ministerial Roles",
-    description: "Held several important ministerial portfolios, including Minister of Justice and Speaker of Parliament, contributing significantly to the nation's governance.",
+    description: "Held several senior cabinet positions, including Minister of Justice, Legal and Parliamentary Affairs, and Speaker of Parliament, contributing to the nation's governance.",
   },
   {
     year: "2014",
-    title: "Vice President of Zimbabwe",
-    description: "Appointed as Vice President, a role in which he served with distinction, supporting national development agendas.",
+    title: "First Vice President",
+    description: "Appointed as First Vice President of Zimbabwe, responsible for overseeing key government programs and national development agendas.",
   },
   {
     year: "2017",
     title: "Inauguration as President",
-    description: "Sworn in as the President of Zimbabwe, ushering in a new era focused on economic reform and national unity.",
+    description: "Sworn in as the second Executive President of Zimbabwe on November 24, 2017, ushering in the 'New Dispensation' focused on economic reform and national unity.",
   },
   {
     year: "2018-Present",
     title: "Leading the Nation",
-    description: "Continues to lead the country with a vision for a prosperous and inclusive Zimbabwe, focusing on economic development, international re-engagement, and improving the lives of all citizens.",
+    description: "Re-elected in 2018 and 2023, continues to lead with Vision 2030, aiming for an upper-middle-income economy through policies like the NDS1, engagement, and infrastructure development.",
   },
 ];
 
