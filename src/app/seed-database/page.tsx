@@ -49,7 +49,7 @@ const placeholderImagesData = {
     {
       id: "timeline-activism",
       altText: "A depiction of guerrilla fighters during the liberation struggle.",
-      imageUrl: "https://www.colonialrelic.com/ww/wp-content/uploads/2012/12/herber_chitepo-249x300.png",
+      imageUrl: "https://media.gettyimages.com/id/93448308/photo/a-nationalist-rhodesian-fighter-trains-may-05-1975-in-the-south-of-rhodesia-the-rhodesian.jpg?s=612x612&w=gi&k=20&c=paausGcZkj4v87BycPB-hMAuA3lWnuuVxWi5H_v_t7w=",
       imageHint: "liberation war",
     },
     {
@@ -97,7 +97,7 @@ const placeholderImagesData = {
     {
       id: "history-origins-2",
       altText: "ZANU PF Founders",
-      imageUrl: "https://www.heraldonline.co.zw/wp-content/uploads/2025/07/e5y5ye5y.jpg",
+      imageUrl: "https://www.pindula.co.zw/images/2/29/Zanu_pf_founders_1963.jpg",
       imageHint: "historical leaders",
     },
     {
@@ -205,7 +205,7 @@ const placeholderImagesData = {
     {
       id: "ideology-structure",
       altText: "The ZANU-PF headquarters building in Harare.",
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/fe/Zanu_PF_Building.jpg",
+      imageUrl: "https://news.pindula.co.zw/wp-content/uploads/2017/11/zanu-pf-building-hq.jpg",
       imageHint: "political building",
     },
     {
@@ -301,7 +301,7 @@ const placeholderImagesData = {
     {
       "id": "gallery-investors-4",
       "altText": "President Mnangagwa in a discussion with investors.",
-      "imageUrl": "https://www.heraldonline.co.zw/wp-content/uploads/site//2/Mnangagwa2.jpg",
+      "imageUrl": "https://www.herald.co.zw/wp-content/uploads/sites/2/2019/01/President-Mnangagwa-meets-investors-in-Belarus-Picture-by-Presidential-Photographer-Joseph-Maherero.jpg",
       "imageHint": "business discussion"
     },
     {
@@ -315,114 +315,6 @@ const placeholderImagesData = {
       "altText": "President Mnangagwa and his son in China.",
       "imageUrl": "https://nehandaradio.com/wp-content/uploads/2024/09/Mnangagwa-and-son-in-China.jpeg",
       "imageHint": "international relations"
-    },
-    {
-      "id": "gallery-infra-1",
-      "altText": "President launching a road construction project.",
-      "imageUrl": "https://southernafricantimes.com/wp-content/uploads/2025/05/IMG_6859.jpeg",
-      "imageHint": "road construction"
-    },
-    {
-      "id": "gallery-infra-2",
-      "altText": "The commissioning of the Trabablas Interchange.",
-      "imageUrl": "https://zimbabweanpatriot.co.zw/wp-content/uploads/2025/05/Trabablas-Interchange-commissioning-780x470.jpg",
-      "imageHint": "infrastructure project"
-    },
-    {
-      "id": "gallery-infra-3",
-      "altText": "President at an infrastructure project launch.",
-      "imageUrl": "https://www.zbcnews.co.zw/wp-content/uploads/2024/12/IMG-20241212-WA0086.jpg",
-      "imageHint": "infrastructure launch"
-    },
-    {
-      "id": "gallery-infra-4",
-      "altText": "President inspecting new infrastructure.",
-      "imageUrl": "https://www.zbcnews.co.zw/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-09-at-12.39.50.jpeg",
-      "imageHint": "infrastructure inspection"
-    },
-    {
-      "id": "gallery-infra-5",
-      "altText": "President at the site of a new interchange.",
-      "imageUrl": "https://www.zimeye.net/wp-content/uploads/2025/05/IMG_1958-739x1024.jpeg",
-      "imageHint": "interchange construction"
-    },
-    {
-      "id": "gallery-infra-6",
-      "altText": "The Trabablas Interchange.",
-      "imageUrl": "https://newziana.co.zw/wp-content/uploads/2025/05/Trabablas-Interchange-696x691.webp",
-      "imageHint": "modern interchange"
-    },
-    {
-      "id": "gallery-rally-1",
-      "altText": "A large crowd at a ZANU-PF rally.",
-      "imageUrl": "https://ipi.media/wp-content/uploads/2023/08/Zimbabwe-ZANU-PF-rally.jpg",
-      "imageHint": "political rally"
-    },
-    {
-      "id": "gallery-rally-2",
-      "altText": "ZANU-PF supporters at a rally.",
-      "imageUrl": "https://gdb.voanews.com/c4310000-0aff-0242-6a66-08d9f4a8c462_w1080_h608.jpeg",
-      "imageHint": "political rally"
-    },
-    {
-      "id": "gallery-rally-3",
-      "altText": "A sea of supporters at a ZANU-PF event.",
-      "imageUrl": "https://www.boell.de/sites/default/files/styles/var_desktop/public/uploads/2018/07/rts1vpm8.jpg.jpg?itok=jmopDs1X",
-      "imageHint": "political rally"
-    },
-    {
-      "id": "gallery-rally-4",
-      "altText": "A ZANU-PF rally in progress.",
-      "imageUrl": "https://zanupf.org.zw/storage/posts/876.jpeg",
-      "imageHint": "political rally"
-    },
-    {
-      "id": "gallery-rally-5",
-      "altText": "A large gathering for a ZANU-PF rally.",
-      "imageUrl": "https://www.aljazeera.com/wp-content/uploads/2018/07/93a6276058da480d94d76e629bcfde62_18.jpeg?resize=1200%2C675",
-      "imageHint": "political rally"
-    },
-    {
-      "id": "gallery-rally-6",
-      "altText": "Supporters at a ZANU-PF rally.",
-      "imageUrl": "https://www.aljazeera.com/wp-content/uploads/2019/10/7bc99a2af3b047c6a3224da9de1c8926_18.jpeg?quality=80&resize=770%2C513",
-      "imageHint": "political rally"
-    },
-    {
-      "id": "gallery-health-1",
-      "altText": "President visiting a hospital.",
-      "imageUrl": "https://s3-eu-west-2.amazonaws.com/newzimlive/wp-content/uploads/2025/06/17060121/ed-hospital-scaled.jpeg",
-      "imageHint": "hospital visit"
-    },
-    {
-      "id": "gallery-health-2",
-      "altText": "President at the Parirenyatwa Hospital.",
-      "imageUrl": "https://www.heraldonline.co.zw/wp-content/uploads/2025/06/President-at-Pari1.jpg",
-      "imageHint": "hospital visit"
-    },
-    {
-      "id": "gallery-health-3",
-      "altText": "President inside a newly equipped hospital wing.",
-      "imageUrl": "https://www.zimlive.com/wp-content/uploads/2025/06/IMG_1761-1200x800.jpeg",
-      "imageHint": "hospital equipment"
-    },
-    {
-      "id": "gallery-health-4",
-      "altText": "Opening event of the Karanda Bridge.",
-      "imageUrl": "https://news.pindula.co.zw/wp-content/uploads/2021/04/Karanda-Bridge-Opening-Event-April-2021.jpg",
-      "imageHint": "bridge opening"
-    },
-    {
-      "id": "gallery-health-5",
-      "altText": "President looking at new hospital equipment.",
-      "imageUrl": "https://www.zimlive.com/wp-content/uploads/2025/06/IMG_1761.jpeg",
-      "imageHint": "hospital equipment"
-    },
-    {
-      "id": "gallery-health-6",
-      "altText": "President at a healthcare facility.",
-      "imageUrl": "https://newsreelzimbabwe.co.zw/wp-content/uploads/2025/06/1000089587-1024x717.jpg",
-      "imageHint": "healthcare facility"
     },
     {
       "id": "gallery-agri-1",
@@ -451,13 +343,13 @@ const placeholderImagesData = {
     {
       "id": "gallery-agri-5",
       "altText": "Distribution of bikes for an agricultural program.",
-      "imageUrl": "https://www.heraldonline.co.zw/wp-content/uploads/site//2/Bikes.jpg",
+      "imageUrl": "https://www.herald.co.zw/wp-content/uploads/sites/2/2021/06/BIKES.jpg",
       "imageHint": "agriculture program"
     },
     {
       "id": "gallery-agri-6",
       "altText": "The Pfumvudza program launch.",
-      "imageUrl": "https://www.heraldonline.co.zw/wp-content/uploads/sites/2/2024/10/Pfumvudza-1.jpg",
+      "imageUrl": "https://www.herald.co.zw/wp-content/uploads/sites/2/2024/10/Pfumvudza-1.jpg",
       "imageHint": "program launch"
     },
     {
@@ -497,42 +389,6 @@ const placeholderImagesData = {
       "imageHint": "airport building"
     },
     {
-      "id": "gallery-edu-1",
-      "altText": "Graduation ceremony at a state university.",
-      "imageUrl": "https://pbs.twimg.com/media/F85iqZhXAAIhbuA.jpg",
-      "imageHint": "graduation ceremony"
-    },
-    {
-      "id": "gallery-edu-2",
-      "altText": "An innovation hub at a university.",
-      "imageUrl": "https://www.hit.ac.zw/wp-content/uploads/2025/09/549198493_1373754208084140_3282227024034345783_n.jpg",
-      "imageHint": "innovation hub"
-    },
-    {
-      "id": "gallery-edu-3",
-      "altText": "Inside a university innovation hub.",
-      "imageUrl": "https://www.hit.ac.zw/images/news/innovation-hub-9.jpg",
-      "imageHint": "innovation hub"
-    },
-    {
-      "id": "gallery-edu-4",
-      "altText": "Students at a graduation ceremony.",
-      "imageUrl": "https://www.heraldonline.co.zw/wp-content/uploads/site//2/WhatsApp-Image-2023-10-20-at-17.21.48-680x380-1.jpeg",
-      "imageHint": "graduation students"
-    },
-    {
-      "id": "gallery-edu-5",
-      "altText": "The HIT university campus.",
-      "imageUrl": "https://www.heraldonline.co.zw/wp-content/uploads/2025/09/HIT2-1.jpg",
-      "imageHint": "university campus"
-    },
-    {
-      "id": "gallery-edu-6",
-      "altText": "A building at HIT university.",
-      "imageUrl": "https://www.heraldonline.co.zw/wp-content/uploads/2025/09/HIT1-1.jpg",
-      "imageHint": "university building"
-    },
-    {
       "id": "gallery-nds1-1",
       "altText": "President Mnangagwa launching the NDS1.",
       "imageUrl": "https://insiderzim.com/wp-content/uploads/Mnangagwa-launches-NDS1.jpg",
@@ -553,7 +409,7 @@ const placeholderImagesData = {
     {
       "id": "gallery-nds1-4",
       "altText": "The National Development Strategy document.",
-      "imageUrl": "https://www.heraldonline.co.zw/wp-content/uploads/sites/3/2020/11/National-dev-strategy.jpg",
+      "imageUrl": "https://www.herald.co.zw/wp-content/uploads/sites/3/2020/11/National-dev-strategy.jpg",
       "imageHint": "document strategy"
     },
     {
@@ -617,3 +473,4 @@ export default function SeedDatabasePage() {
 }
 
     
+

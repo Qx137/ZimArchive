@@ -16,7 +16,6 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'placehold.co' },
       { protocol: 'https', hostname: 'prod.cdn-medias.theafricareport.com' },
       { protocol: 'https', hostname: 'upload.wikimedia.org' },
-      { protocol: 'https', hostname: 'www.zbcnews.co.zw' },
       { protocol: 'https', hostname: 'media.cnn.com' },
       { protocol: 'https', hostname: 'i.guim.co.uk' },
       { protocol: 'https', hostname: 'www.aljazeera.com' },
