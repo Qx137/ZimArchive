@@ -14,7 +14,6 @@ const navLinks = [
   { href: "/achievements", label: "Achievements" },
   { href: "/history", label: "History" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/fact-checker", label: "Fact Checker" },
 ];
 
 export function Header() {

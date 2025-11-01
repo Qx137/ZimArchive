@@ -31,12 +31,6 @@
       "imageHint": "photo gallery"
     },
     {
-      "id": "hero-fact-checker",
-      "description": "A person using a magnifying glass to examine a document.",
-      "imageUrl": "https://images.unsplash.com/photo-1516382799247-87df95d790b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYWduaWZ5aW5nJTIwZ2xhc3N8ZW58MHx8fHwxNzYxOTczODg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "magnifying glass"
-    },
-    {
       "id": "gallery-1",
       "description": "President giving a speech at a podium.",
       "imageUrl": "https://images.unsplash.com/photo-1761001826702-1e2b20a32507?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBzcGVlY2h8ZW58MHx8fHwxNzYxOTkxNTQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",

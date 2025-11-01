@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { ArrowRight, BookOpen, CheckCircle, GalleryHorizontal, Landmark, Presentation } from "lucide-react";
+import { ArrowRight, BookOpen, GalleryHorizontal, Landmark, Presentation } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,13 +33,6 @@ const featureCards = [
     href: "/gallery",
     icon: <GalleryHorizontal className="w-8 h-8 text-primary" />,
     image: PlaceHolderImages.find(img => img.id === "hero-gallery")
-  },
-   {
-    title: "AI Fact Checker",
-    description: "Verify statements with our AI-powered validation tool.",
-    href: "/fact-checker",
-    icon: <CheckCircle className="w-8 h-8 text-primary" />,
-    image: PlaceHolderImages.find(img => img.id === "hero-fact-checker")
   },
 ];
 
