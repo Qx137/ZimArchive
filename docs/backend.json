@@ -1,0 +1,340 @@
+{
+  "entities": {
+    "President": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "President",
+      "type": "object",
+      "description": "Represents the President of Zimbabwe.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the President entity."
+        },
+        "fullName": {
+          "type": "string",
+          "description": "The full name of the President."
+        },
+        "birthDate": {
+          "type": "string",
+          "description": "The birth date of the President.",
+          "format": "date-time"
+        },
+        "birthPlace": {
+          "type": "string",
+          "description": "The birthplace of the President."
+        },
+        "politicalPartyId": {
+          "type": "string",
+          "description": "Reference to PoliticalParty. (Relationship: President 1:1 PoliticalParty)"
+        },
+        "profileImageId": {
+          "type": "string",
+          "description": "Reference to Image. (Relationship: President 1:1 Image)"
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed description or biography of the President."
+        }
+      },
+      "required": [
+        "id",
+        "fullName",
+        "birthDate",
+        "birthPlace",
+        "politicalPartyId"
+      ]
+    },
+    "PoliticalParty": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "PoliticalParty",
+      "type": "object",
+      "description": "Represents a political party.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the PoliticalParty entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the political party."
+        },
+        "ideology": {
+          "type": "string",
+          "description": "The ideology of the political party."
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed description of the political party's history and goals."
+        },
+        "logoImageId": {
+          "type": "string",
+          "description": "Reference to Image. (Relationship: PoliticalParty 1:1 Image)"
+        },
+        "leaderId": {
+          "type": "string",
+          "description": "Reference to President. (Relationship: PoliticalParty 1:1 President)"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "ideology"
+      ]
+    },
+    "Achievement": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Achievement",
+      "type": "object",
+      "description": "Represents an achievement of the President or the political party.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Achievement entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the achievement."
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed description of the achievement."
+        },
+        "date": {
+          "type": "string",
+          "description": "The date when the achievement was accomplished.",
+          "format": "date-time"
+        },
+        "categoryId": {
+          "type": "string",
+          "description": "Reference to Category. (Relationship: Achievement 1:1 Category)"
+        },
+        "imageIds": {
+          "type": "array",
+          "description": "References to Images. (Relationship: Achievement 1:N Images)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "presidentId": {
+          "type": "string",
+          "description": "Reference to President. (Relationship: President 1:N Achievement)"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "date",
+        "categoryId"
+      ]
+    },
+    "Category": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Category",
+      "type": "object",
+      "description": "Represents a category for achievements.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Category entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the category (e.g., Economy, Education, Health)."
+        },
+        "description": {
+          "type": "string",
+          "description": "A description of the category."
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "TimelineEvent": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "TimelineEvent",
+      "type": "object",
+      "description": "Represents an event in the President's timeline.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the TimelineEvent entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the timeline event."
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed description of the timeline event."
+        },
+        "date": {
+          "type": "string",
+          "description": "The date of the timeline event.",
+          "format": "date-time"
+        },
+        "presidentId": {
+          "type": "string",
+          "description": "Reference to President. (Relationship: President 1:N TimelineEvent)"
+        },
+        "imageIds": {
+          "type": "array",
+          "description": "References to Images. (Relationship: TimelineEvent 1:N Images)",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "date",
+        "presidentId"
+      ]
+    },
+    "Image": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Image",
+      "type": "object",
+      "description": "Represents an image stored in the database.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Image entity."
+        },
+        "filename": {
+          "type": "string",
+          "description": "The filename of the image."
+        },
+        "mimeType": {
+          "type": "string",
+          "description": "The MIME type of the image (e.g., image/jpeg, image/png)."
+        },
+        "data": {
+          "type": "string",
+          "description": "The Base64 encoded image data."
+        },
+        "altText": {
+          "type": "string",
+          "description": "Alternative text for the image for accessibility purposes."
+        }
+      },
+      "required": [
+        "id",
+        "filename",
+        "mimeType",
+        "data"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/presidents/{presidentId}",
+        "definition": {
+          "entityName": "President",
+          "schema": {
+            "$ref": "#/backend/entities/President"
+          },
+          "description": "Stores information about presidents.",
+          "params": [
+            {
+              "name": "presidentId",
+              "description": "The unique identifier of the president."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/political_parties/{politicalPartyId}",
+        "definition": {
+          "entityName": "PoliticalParty",
+          "schema": {
+            "$ref": "#/backend/entities/PoliticalParty"
+          },
+          "description": "Stores information about political parties.",
+          "params": [
+            {
+              "name": "politicalPartyId",
+              "description": "The unique identifier of the political party."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/achievements/{achievementId}",
+        "definition": {
+          "entityName": "Achievement",
+          "schema": {
+            "$ref": "#/backend/entities/Achievement"
+          },
+          "description": "Stores information about achievements.",
+          "params": [
+            {
+              "name": "achievementId",
+              "description": "The unique identifier of the achievement."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/categories/{categoryId}",
+        "definition": {
+          "entityName": "Category",
+          "schema": {
+            "$ref": "#/backend/entities/Category"
+          },
+          "description": "Stores information about achievement categories.",
+          "params": [
+            {
+              "name": "categoryId",
+              "description": "The unique identifier of the category."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/timeline_events/{timelineEventId}",
+        "definition": {
+          "entityName": "TimelineEvent",
+          "schema": {
+            "$ref": "#/backend/entities/TimelineEvent"
+          },
+          "description": "Stores timeline events for presidents.",
+          "params": [
+            {
+              "name": "timelineEventId",
+              "description": "The unique identifier of the timeline event."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/images/{imageId}",
+        "definition": {
+          "entityName": "Image",
+          "schema": {
+            "$ref": "#/backend/entities/Image"
+          },
+          "description": "Stores image data.",
+          "params": [
+            {
+              "name": "imageId",
+              "description": "The unique identifier of the image."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore data structure is designed to store information about the President of Zimbabwe, political parties, achievements, timeline events, categories, and images. The structure emphasizes clarity, security, and scalability.\n\n*   **Authorization Independence:** The data structure uses path-based ownership for user-specific data (if any user specific data were to be created, as per principle C.) and avoids hierarchical authorization dependencies. All collections related to presidents or political parties are top-level collections, allowing for direct access and management of documents without needing to retrieve parent documents.\n\n*   **Structural Segregation:** Data with different access requirements are stored in separate collections. For example, `images` are stored separately from `achievements`. This segregation simplifies security rules and ensures that rules are not used as filters.\n\n*   **Access Modeling:** Consistent patterns are used for data access. All entities use unique IDs. Relationship are modeled via ID references (e.g., `President.politicalPartyId` references `PoliticalParty.id`).\n\n*   **Data Clarity and Predictability:** The schema for each entity is explicitly defined, and naming conventions are followed consistently.  Timestamps for creation or modification could be added if needed, but are not explicitly required by the schema.\n\n*   **QAPs (Rules are not Filters):**  The separation of concerns into different collections, combined with direct path access, ensures that list operations can be performed securely without overly complex rules.  If collaborative data were needed (e.g. user comments on achievements), a membership map approach would be employed, but it is not needed here.\n\nThis structure provides a robust and scalable foundation for the ZimArchive application, allowing for efficient data management and secure access control."
+  }
+}
