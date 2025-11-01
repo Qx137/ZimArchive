@@ -30,7 +30,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.zimlive.com' },
       { protocol: 'https', hostname: '**.zimeye.net' },
       { protocol: 'https', hostname: '**.zimbabwesituation.com' },
-      { protocol: 'httpshttps', hostname: '**.theafricareport.com' },
+      { protocol: 'https', hostname: '**.theafricareport.com' },
       { protocol: 'https', hostname: '**.cnn.com' },
       { protocol: 'https', hostname: '**.guim.co.uk' },
       { protocol: 'https', hostname: '**.ft.com' },
@@ -68,12 +68,15 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.hit.ac.zw' },
     ],
   },
+  // This is required for the dev environment to work correctly.
   experimental: {
-    // This is required for the dev environment to work correctly.
-    allowedDevOrigins: [
-      "https://*.cluster-fbfjltn375c6wqxlhoehbz44sk.cloudworkstations.dev",
-    ],
+    // NOTE: `allowedDevOrigins` is deprecated and has been moved to the top level.
+    // The new property `experimental.allowedDevOrigins` is left here intentionally
+    // in case of older Next.js versions, but the top-level one will be used.
   },
+  allowedDevOrigins: [
+    "https://*.cluster-fbfjltn375c6wqxlhoehbz44sk.cloudworkstations.dev",
+  ],
 };
 
 export default nextConfig;
