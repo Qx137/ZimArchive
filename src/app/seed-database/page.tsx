@@ -12,8 +12,8 @@ const placeholderImagesData = {
     {
       id: "hero-main",
       altText: "A majestic view of the Zimbabwe landscape at sunrise.",
-      imageUrl: "https://images.unsplash.com/photo-1558013533-a3b555e3a890?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxaaW1iYWJ3ZSUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NjIxMjI3MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      imageHint: "Zimbabwe landscape",
+      imageUrl: "https://images.unsplash.com/photo-1505322268928-5f045a47e396?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkcmFtYXRpYyUyMHN1bnNldCUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NjIyOTI0ODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageHint: "dramatic sunset",
     },
     {
       id: "hero-timeline",
@@ -24,7 +24,7 @@ const placeholderImagesData = {
     {
       id: "hero-achievements",
       altText: "The newly constructed Mbudzi interchange in Harare, an example of modern infrastructure.",
-      imageUrl: "https://images.unsplash.com/photo-1520986639249-3c82700a0624?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2FkJTIwY29uc3RydWN0aW9ufGVufDB8fHx8MTc2MjEyMjk2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1587299484838-524177435f52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBpbmZyYXN0cnVjdHVyZXxlbnwwfHx8fDE3NjIxMjI5ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       imageHint: "modern infrastructure",
     },
     {
@@ -102,13 +102,13 @@ const placeholderImagesData = {
     {
       id: "key-figure-1",
       altText: "A portrait of Robert Mugabe, a key figure in Zimbabwe's history.",
-      imageUrl: "https://images.unsplash.com/photo-1609188737575-de6f9a421e42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG9mJTIwYW4lMjBhZnJpY2FuJTIwbGVhZGVyfGVufDB8fHx8MTc2MjEyMzI4N3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1609188737575-de6f9a421e42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG9mJTIwYW4lMjBhZnJpY2FuJTIwbGVhZGVyfGVufDB8fHx8MTc2MjEyMzI4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       imageHint: "portrait leader",
     },
     {
       id: "key-figure-2",
       altText: "A portrait of Joshua Nkomo, known as 'Father Zimbabwe'.",
-      imageUrl: "https://images.unsplash.com/photo-1610212595059-3b69a25f4a7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG9mJTIwYW4lMjBlbGRlcmx5JTIwYWZyaWNhbiUyMG1hbnxlbnwwfHx8fDE3NjIxMjMzMTl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1610212595059-3b69a25f4a7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG9mJTIwYW4lMjBlbGRlcmx5JTIwYWZyaWNhbiUyMG1hbnxlbnwwfHx8fDE3NjIxMjMzMTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       imageHint: "portrait elder",
     },
     {
@@ -163,3 +163,6 @@ export default function SeedDatabasePage() {
       <p className="mt-4 text-sm text-muted-foreground">{status}</p>
     </div>
   );
+}
+
+    
