@@ -33,6 +33,12 @@ const nextConfig: NextConfig = {
         hostname: 'share.google',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'media.istockphoto.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
