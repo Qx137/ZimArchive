@@ -39,6 +39,12 @@ const nextConfig: NextConfig = {
         hostname: 'media.istockphoto.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'prod.cdn-medias.theafricareport.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
