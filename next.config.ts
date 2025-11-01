@@ -184,6 +184,12 @@ const nextConfig: NextConfig = {
         hostname: 'masvingomirror.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
