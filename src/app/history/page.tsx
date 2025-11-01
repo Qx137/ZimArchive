@@ -1,5 +1,7 @@
+"use client";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { useImages } from "@/hooks/use-images";
 import { BookOpen, Users, Milestone } from "lucide-react";
 import Image from "next/image";
 
@@ -10,7 +12,8 @@ const keyFigures = [
 ];
 
 export default function HistoryPage() {
-    const originsImage = PlaceHolderImages.find(img => img.id === "history-origins");
+    const { images, isLoading } = useImages();
+    const originsImage = images?.find(img => img.id === "history-origins");
 
     return (
         <div className="bg-background min-h-screen">
@@ -39,7 +42,7 @@ export default function HistoryPage() {
                                 {originsImage && (
                                     <Image
                                         src={originsImage.imageUrl}
-                                        alt={originsImage.description}
+                                        alt={originsImage.altText}
                                         fill
                                         className="object-cover"
                                         data-ai-hint={originsImage.imageHint}
@@ -61,7 +64,7 @@ export default function HistoryPage() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {keyFigures.map((figure) => {
-                             const figureImage = PlaceHolderImages.find(img => img.id === figure.imageId);
+                             const figureImage = images?.find(img => img.id === figure.imageId);
                              return (
                                 <Card key={figure.name} className="text-center shadow-lg hover:shadow-2xl transition-shadow duration-300 border-primary/20">
                                     <CardHeader>
@@ -69,7 +72,7 @@ export default function HistoryPage() {
                                             <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden border-4 border-accent">
                                             <Image
                                                 src={figureImage.imageUrl}
-                                                alt={figureImage.description}
+                                                alt={figureImage.altText}
                                                 fill
                                                 className="object-cover"
                                                 data-ai-hint={figureImage.imageHint}

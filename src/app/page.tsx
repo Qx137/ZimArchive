@@ -1,44 +1,52 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { ArrowRight, BookOpen, GalleryHorizontal, Landmark, Presentation } from "lucide-react";
+import { ArrowRight, GalleryHorizontal, Landmark, Presentation } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ZimbabweBirdIcon } from "@/components/icons/zimbabwe-bird";
-
-const featureCards = [
-  {
-    title: "Presidential Timeline",
-    description: "Follow the President's journey, from early life to key career milestones.",
-    href: "/timeline",
-    icon: <Presentation className="w-8 h-8 text-primary" />,
-    image: PlaceHolderImages.find(img => img.id === "hero-timeline")
-  },
-  {
-    title: "Key Achievements",
-    description: "Explore the transformative initiatives and progress across various sectors.",
-    href: "/achievements",
-    icon: <Landmark className="w-8 h-8 text-primary" />,
-    image: PlaceHolderImages.find(img => img.id === "hero-achievements")
-  },
-  {
-    title: "Party History",
-    description: "Learn about the origins, key figures, and historical context of the party.",
-    href: "/history",
-    icon: <ZimbabweBirdIcon className="w-8 h-8 text-primary" />,
-    image: PlaceHolderImages.find(img => img.id === "hero-history")
-  },
-  {
-    title: "Image Gallery",
-    description: "A visual journey through significant moments and events.",
-    href: "/gallery",
-    icon: <GalleryHorizontal className="w-8 h-8 text-primary" />,
-    image: PlaceHolderImages.find(img => img.id === "hero-gallery")
-  },
-];
+import { useImages } from "@/hooks/use-images";
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find(img => img.id === "hero-main");
+  const { images, isLoading } = useImages();
+
+  const heroImage = images?.find(img => img.id === "hero-main");
+  const heroTimelineImage = images?.find(img => img.id === "hero-timeline");
+  const heroAchievementsImage = images?.find(img => img.id === "hero-achievements");
+  const heroHistoryImage = images?.find(img => img.id === "hero-history");
+  const heroGalleryImage = images?.find(img => img.id === "hero-gallery");
+  
+  const featureCards = [
+    {
+      title: "Presidential Timeline",
+      description: "Follow the President's journey, from early life to key career milestones.",
+      href: "/timeline",
+      icon: <Presentation className="w-8 h-8 text-primary" />,
+      image: heroTimelineImage
+    },
+    {
+      title: "Key Achievements",
+      description: "Explore the transformative initiatives and progress across various sectors.",
+      href: "/achievements",
+      icon: <Landmark className="w-8 h-8 text-primary" />,
+      image: heroAchievementsImage
+    },
+    {
+      title: "Party History",
+      description: "Learn about the origins, key figures, and historical context of the party.",
+      href: "/history",
+      icon: <ZimbabweBirdIcon className="w-8 h-8 text-primary" />,
+      image: heroHistoryImage
+    },
+    {
+      title: "Image Gallery",
+      description: "A visual journey through significant moments and events.",
+      href: "/gallery",
+      icon: <GalleryHorizontal className="w-8 h-8 text-primary" />,
+      image: heroGalleryImage
+    },
+  ];
 
   return (
     <div className="flex flex-col">
@@ -47,7 +55,7 @@ export default function Home() {
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
-            alt={heroImage.description}
+            alt={heroImage.altText}
             fill
             className="object-cover"
             priority
@@ -90,7 +98,7 @@ export default function Home() {
                         <div className="relative w-full h-48">
                           <Image
                             src={featureImage.imageUrl}
-                            alt={featureImage.description}
+                            alt={featureImage.altText}
                             fill
                             className="object-cover"
                             data-ai-hint={featureImage.imageHint}

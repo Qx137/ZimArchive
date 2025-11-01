@@ -1,9 +1,13 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui/card";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { useImages } from "@/hooks/use-images";
 import Image from "next/image";
 
 export default function GalleryPage() {
-  const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith("gallery-"));
+  const { images, isLoading } = useImages();
+
+  const galleryImages = images?.filter(img => img.id.startsWith("gallery-"));
 
   return (
     <div className="bg-background min-h-screen">
@@ -16,13 +20,13 @@ export default function GalleryPage() {
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryImages.map((image) => (
+          {galleryImages?.map((image) => (
             <Card key={image.id} className="overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-300 border-primary/20">
               <CardContent className="p-0">
                 <div className="relative aspect-video">
                   <Image
                     src={image.imageUrl}
-                    alt={image.description}
+                    alt={image.altText}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -30,7 +34,7 @@ export default function GalleryPage() {
                   />
                 </div>
                  <div className="p-4">
-                    <p className="font-body text-sm text-muted-foreground">{image.description}</p>
+                    <p className="font-body text-sm text-muted-foreground">{image.altText}</p>
                 </div>
               </CardContent>
             </Card>
