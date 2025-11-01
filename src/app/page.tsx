@@ -18,7 +18,7 @@ const featureCardsData = [
   },
   {
     title: "Key Achievements",
-    description: "Explore the transformative initiatives and progress across various sectors.",
+    description: "Explore the transformative initiatives and progress across various sectors, including the Mbudzi interchange.",
     href: "/achievements",
     icon: <Landmark className="w-8 h-8 text-primary" />,
     imageId: "hero-achievements"
@@ -42,21 +42,19 @@ const featureCardsData = [
 
 export default function Home() {
   const { images, isLoading } = useImages();
-
-  const heroImage = images?.find(img => img.id === "hero-main");
   
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] md:h-[60vh] text-white">
-        {heroImage && (
+        {images?.find(img => img.id === "hero-main") && (
           <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.altText}
+            src={images?.find(img => img.id === "hero-main")!.imageUrl}
+            alt={images?.find(img => img.id === "hero-main")!.altText}
             fill
             className="object-cover"
             priority
-            data-ai-hint={heroImage.imageHint}
+            data-ai-hint={images?.find(img => img.id === "hero-main")!.imageHint}
           />
         )}
         <div className="absolute inset-0 bg-black/60" />
