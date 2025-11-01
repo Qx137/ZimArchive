@@ -2,7 +2,6 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -22,17 +21,23 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'omo-oss-image.thefastimg.com' },
       { protocol: 'https', hostname: 's3-eu-west-2.amazonaws.com' },
       { protocol: 'https', hostname: 'i0.wp.com' },
-      
+      { protocol: 'https', hostname: 'www.english.ox.ac.uk' },
+      { protocol: 'https' , hostname: 'www.colonialrelic.com'},
+      { protocol: 'https', hostname: 'static.wixstatic.com' },
+      { protocol: 'https' , hostname: 'www.victoriafalls-guide.net'},
+      { protocol: 'https' , hostname: 'www.dandaro.online'},
+      { protocol: 'https', hostname: 'images.routledge.com' },
+
+
       // Publication Wildcards
       { protocol: 'https', hostname: '**.aljazeera.com' },
       { protocol: 'https', hostname: '**.pindula.co.zw' },
-      { protocol: 'https', hostname: '**.herald.co.zw' },
-      { protocol: 'https', hostname: 'www.heraldonline.co.zw' },
+      { protocol: 'https|http', hostname: '**.herald.co.zw' },
       { protocol: 'https', hostname: '**.zbcnews.co.zw' },
       { protocol: 'https', hostname: '**.zimlive.com' },
       { protocol: 'https', hostname: '**.zimeye.net' },
       { protocol: 'https', hostname: '**.zimbabwesituation.com' },
-      { protocol: 'https', hostname: '**.theafricareport.com' },
+      { protocol: 'httpshttps', hostname: '**.theafricareport.com' },
       { protocol: 'https', hostname: '**.cnn.com' },
       { protocol: 'https', hostname: '**.guim.co.uk' },
       { protocol: 'https', hostname: '**.ft.com' },
@@ -48,6 +53,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.insiderzim.com' },
       { protocol: 'https', hostname: '**.startupbiz.co.zw' },
       { protocol: 'https', hostname: '**.boell.de' },
+      { protocol: 'https', hostname: '**.tandfonline.com' },
       
       // Other Specific Domains
       { protocol: 'https', hostname: 'hurumende.com' },
@@ -60,13 +66,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'infomin.org.zw' },
       { protocol: 'https', hostname: 'freightnews.co.za' },
       { protocol: 'https', hostname: 'hit.ac.zw' },
-      { protocol: 'https', hostname: 'www.tandfonline.com' },
-      { protocol: 'https', hostname: 'www.english.ox.ac.uk' },
-      { protocol: 'https', hostname: 'www.colonialrelic.com' },
-      { protocol: 'https', hostname: 'static.wixstatic.com' },
-      { protocol: 'https', hostname: 'www.victoriafalls-guide.net' },
-      { protocol: 'https', hostname: 'www.dandaro.online' },
-      { protocol: 'https', hostname: 'images.routledge.com' },
+      { protocol: 'https', hostname: 'www.heraldonline.co.zw' },
     ],
   },
   experimental: {
