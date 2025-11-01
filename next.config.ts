@@ -55,7 +55,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'hurumende.com' },
       { protocol: 'https', hostname: 'zimbabweanpatriot.co.zw' },
       { protocol: 'https', hostname: 'zanupf.org.zw' },
-      { protocol: 'https', hostname 'resa.aero' },
+      { protocol: 'https', hostname: 'resa.aero' },
       { protocol: 'https', hostname: 'apta.biz' },
       { protocol: 'https', hostname: 'cite.org.zw' },
       { protocol: 'https', hostname: 'acz.co.zw' },
