@@ -26,7 +26,6 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.aljazeera.com' },
       { protocol: 'https', hostname: '**.pindula.co.zw' },
       { protocol: 'https', hostname: '**.herald.co.zw' },
-      { protocol: 'https', hostname: 'www.heraldonline.co.zw' },
       { protocol: 'https', hostname: '**.zbcnews.co.zw' },
       { protocol: 'https', hostname: '**.zimlive.com' },
       { protocol: 'https', hostname: '**.zimeye.net' },
@@ -47,15 +46,6 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.insiderzim.com' },
       { protocol: 'https', hostname: '**.startupbiz.co.zw' },
       { protocol: 'https', hostname: 'cite.org.zw' },
-
-      // Other Specific Domains
-      { protocol: 'https', hostname: 'www.tandfonline.com' },
-      { protocol: 'https', hostname: 'www.english.ox.ac.uk' },
-      { protocol: 'https', hostname: 'www.colonialrelic.com' },
-      { protocol: 'https', hostname: 'static.wixstatic.com' },
-      { protocol: 'https', hostname: 'www.victoriafalls-guide.net' },
-      { protocol: 'https', hostname: 'www.dandaro.online' },
-      { protocol: 'https', hostname: 'images.routledge.com' },
       { protocol: 'https', hostname: 'omo-oss-image.thefastimg.com' },
       { protocol: 'https', hostname: 'hurumende.com' },
       { protocol: 'https', hostname: 'zimbabweanpatriot.co.zw' },
@@ -67,6 +57,15 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.freightnews.co.za' },
       { protocol: 'https', hostname: 'apta.biz' },
       { protocol: 'https', hostname: '**.hit.ac.zw' },
+      
+      // Other Specific Domains
+      { protocol: 'https', hostname: 'www.tandfonline.com' },
+      { protocol: 'https', hostname: 'www.english.ox.ac.uk' },
+      { protocol: 'https', hostname: 'www.colonialrelic.com' },
+      { protocol: 'https', hostname: 'static.wixstatic.com' },
+      { protocol: 'https', hostname: 'www.victoriafalls-guide.net' },
+      { protocol: 'https', hostname: 'www.dandaro.online' },
+      { protocol: 'https', hostname: 'images.routledge.com' },
     ],
   },
   // This is required for the dev environment to work correctly.
