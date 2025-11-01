@@ -1,13 +1,70 @@
 "use client";
 
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useImages } from "@/hooks/use-images";
 import Image from "next/image";
 
-export default function GalleryPage() {
-  const { images, isLoading } = useImages();
+const gallerySections = [
+  {
+    id: "speech",
+    title: "President Addressing the Nation",
+    context: "This captures the ceremonial and public-face role of the presidency — the leader addressing the nation, often under the national flag, signalling authority, continuity and message delivery.",
+    imageIds: ["gallery-speech-1", "gallery-speech-2", "gallery-speech-3", "gallery-speech-4", "gallery-speech-5", "gallery-speech-6"],
+  },
+  {
+    id: "investment",
+    title: "Meeting with International Investors",
+    context: "A key example of the “engagement & re-engagement” agenda promoted under his tenure — seeking foreign investment, particularly in mining and other extractive sectors, to drive growth.",
+    imageIds: ["gallery-investors-1", "gallery-investors-2", "gallery-investors-3", "gallery-investors-4", "gallery-investors-5", "gallery-investors-6"],
+  },
+  {
+    id: "infrastructure",
+    title: "Launching Road Construction Projects",
+    context: "Infrastructure is a recurring theme in his government’s communication — new roads, dual carriageways, transport upgrades tied to the vision of economic revival and connectivity.",
+    imageIds: ["gallery-infra-1", "gallery-infra-2", "gallery-infra-3", "gallery-infra-4", "gallery-infra-5", "gallery-infra-6"],
+  },
+  {
+    id: "rally",
+    title: "ZANU-PF Political Rallies",
+    context: "Political mass events remain core to party politics in Zimbabwe. These large gatherings communicate strength, support, and mobilisation — especially during election campaigns or major party announcements.",
+    imageIds: ["gallery-rally-1", "gallery-rally-2", "gallery-rally-3", "gallery-rally-4", "gallery-rally-5", "gallery-rally-6"],
+  },
+  {
+    id: "health",
+    title: "Visiting Newly Equipped Hospitals",
+    context: "Showcases the social service dimension — health, welfare and public service improvement are important for legitimacy and demonstrating government commitment beyond politics and economics.",
+    imageIds: ["gallery-health-1", "gallery-health-2", "gallery-health-3", "gallery-health-4", "gallery-health-5", "gallery-health-6"],
+  },
+  {
+    id: "agriculture",
+    title: "Inspecting Pfumvudza/Intwasa Programme",
+    context: "Agriculture remains central to Zimbabwe’s economy and identity. The Pfumvudza/Intwasa scheme is part of efforts to revitalise farming, so a presidential inspection highlights prioritisation of rural development and food security.",
+    imageIds: ["gallery-agri-1", "gallery-agri-2", "gallery-agri-3", "gallery-agri-4", "gallery-agri-5", "gallery-agri-6"],
+  },
+  {
+    id: "airport",
+    title: "New R.G. Mugabe International Airport Terminal",
+    context: "Infrastructure of national significance — modern airport terminals signal connectivity, investment readiness, and national image. It's also a symbol of progress and ambition in global terms.",
+    imageIds: ["gallery-airport-1", "gallery-airport-2", "gallery-airport-3", "gallery-airport-4", "gallery-airport-5", "gallery-airport-6"],
+  },
+  {
+    id: "education",
+    title: "Graduation at University Innovation Hub",
+    context: "Education and innovation are vital for a transition to a knowledge-based economy. These images underline efforts to shift from raw resource dependence toward high-value, skills-driven sectors.",
+    imageIds: ["gallery-edu-1", "gallery-edu-2", "gallery-edu-3", "gallery-edu-4", "gallery-edu-5", "gallery-edu-6"],
+  },
+  {
+    id: "nds1",
+    title: "Launch of National Development Strategy 1 (NDS1)",
+    context: "Strategic policy launches frame the government’s long-term roadmap. NDS1 is the blueprint toward an upper-middle-income economy by 2030, so the launch event is a key moment in the narrative.",
+    imageIds: ["gallery-nds1-1", "gallery-nds1-2", "gallery-nds1-3", "gallery-nds1-4", "gallery-nds1-5", "gallery-nds1-6"],
+  }
+];
 
-  const galleryImages = images?.filter(img => img.id.startsWith("gallery-"));
+
+export default function GalleryPage() {
+  const { images } = useImages();
 
   return (
     <div className="bg-background min-h-screen">
@@ -18,27 +75,60 @@ export default function GalleryPage() {
             A visual chronicle of the President's activities, party events, and significant national moments.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryImages?.map((image) => (
-            <Card key={image.id} className="overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-300 border-primary/20">
-              <CardContent className="p-0">
-                <div className="relative aspect-video">
-                  <Image
-                    src={image.imageUrl}
-                    alt={image.altText}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    data-ai-hint={image.imageHint}
-                  />
-                </div>
-                 <div className="p-4">
-                    <p className="font-body text-sm text-muted-foreground">{image.altText}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+
+        <div className="space-y-16">
+          {gallerySections.map((section) => {
+            const sectionImages = section.imageIds.map(id => images?.find(img => img.id === id)).filter(Boolean);
+
+            return (
+              <section key={section.id}>
+                <Card className="shadow-xl border-primary/20 overflow-hidden">
+                  <CardHeader>
+                    <CardTitle className="font-headline text-3xl text-primary">{section.title}</CardTitle>
+                    <CardDescription className="font-body text-base text-muted-foreground pt-2">{section.context}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    {sectionImages.length > 0 ? (
+                      <Carousel
+                        opts={{
+                          align: "start",
+                          loop: true,
+                        }}
+                        className="w-full"
+                      >
+                        <CarouselContent>
+                          {sectionImages.map((image) => (
+                            <CarouselItem key={image.id} className="md:basis-1/2 lg:basis-1/3">
+                               <div className="p-1">
+                                <Card className="overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-300 border-primary/10">
+                                    <CardContent className="p-0">
+                                        <div className="relative aspect-video">
+                                        <Image
+                                            src={image.imageUrl}
+                                            alt={image.altText}
+                                            fill
+                                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            data-ai-hint={image.imageHint}
+                                        />
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                               </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="ml-12" />
+                        <CarouselNext className="mr-12" />
+                      </Carousel>
+                    ) : (
+                      <p className="text-muted-foreground">Loading images...</p>
+                    )}
+                  </CardContent>
+                </Card>
+              </section>
+            );
+          })}
         </div>
       </div>
     </div>
