@@ -12,7 +12,7 @@ const placeholderImagesData = {
     {
       id: "hero-main",
       altText: "A majestic view of the Zimbabwe landscape at sunrise.",
-      imageUrl: "https://share.google/images/iZYQ2VlooISPwDyOp",
+      imageUrl: "https://images.unsplash.com/photo-1558013533-a3b555e3a890?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxaaW1iYWJ3ZSUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NjIxMjI3MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       imageHint: "Zimbabwe landscape",
     },
     {
@@ -24,7 +24,7 @@ const placeholderImagesData = {
     {
       id: "hero-achievements",
       altText: "The newly constructed Mbudzi interchange in Harare, an example of modern infrastructure.",
-      imageUrl: "https://images.unsplash.com/photo-1629089299103-f3659f14d84f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxab2Rlcm4lMjBpbmZyYXN0cnVjdHVyZXxlbnwwfHx8fDE3NjIxMjI4MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1520986639249-3c82700a0624?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2FkJTIwY29uc3RydWN0aW9ufGVufDB8fHx8MTc2MjEyMjk2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       imageHint: "modern infrastructure",
     },
     {
@@ -96,7 +96,7 @@ const placeholderImagesData = {
     {
       id: "history-origins",
       altText: "An archival document detailing the formation of ZANU in 1963.",
-      imageUrl: "https://images.unsplash.com/photo-1583445395064-9628a43e4986?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaXN0b3JpY2FsJTIwZG9jdW1lbnR8ZW58MHx8fHwxNzYxOTI4ODU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1583445395064-9628a43e4986?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaXN0b3JpY2FsJTIwZG9jdW1lbnR8ZW58MHx8fHwxNzYxOTI4ODU2fDA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "historical document",
     },
     {
@@ -163,4 +163,3 @@ export default function SeedDatabasePage() {
       <p className="mt-4 text-sm text-muted-foreground">{status}</p>
     </div>
   );
-}
