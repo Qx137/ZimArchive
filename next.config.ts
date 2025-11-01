@@ -30,7 +30,6 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'cdn.britannica.com' },
       { protocol: 'https', hostname: 'www.dandaro.online' },
       { protocol: 'https', hostname: '*.pindula.co.zw' },
-      { protocol: 'https', hostname: 'news.pindula.co.zw' },
       { protocol: 'https', hostname: 'www.zimbabwesituation.com' },
       { protocol: 'https', hostname: 's3-eu-west-2.amazonaws.com' },
       { protocol: 'https', hostname: 'cite.org.zw' },
