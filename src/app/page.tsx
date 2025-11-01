@@ -8,46 +8,43 @@ import Link from "next/link";
 import { ZimbabweBirdIcon } from "@/components/icons/zimbabwe-bird";
 import { useImages } from "@/hooks/use-images";
 
+const featureCardsData = [
+  {
+    title: "Presidential Timeline",
+    description: "Follow the President's journey, from early life to key career milestones.",
+    href: "/timeline",
+    icon: <Presentation className="w-8 h-8 text-primary" />,
+    imageId: "hero-timeline"
+  },
+  {
+    title: "Key Achievements",
+    description: "Explore the transformative initiatives and progress across various sectors.",
+    href: "/achievements",
+    icon: <Landmark className="w-8 h-8 text-primary" />,
+    imageId: "hero-achievements"
+  },
+  {
+    title: "Party History",
+    description: "Learn about the origins, key figures, and historical context of the party.",
+    href: "/history",
+    icon: <ZimbabweBirdIcon className="w-8 h-8 text-primary" />,
+    imageId: "hero-history"
+  },
+  {
+    title: "Image Gallery",
+    description: "A visual journey through significant moments and events.",
+    href: "/gallery",
+    icon: <GalleryHorizontal className="w-8 h-8 text-primary" />,
+    imageId: "hero-gallery"
+  },
+];
+
+
 export default function Home() {
   const { images, isLoading } = useImages();
 
   const heroImage = images?.find(img => img.id === "hero-main");
-  const heroTimelineImage = images?.find(img => img.id === "hero-timeline");
-  const heroAchievementsImage = images?.find(img => img.id === "hero-achievements");
-  const heroHistoryImage = images?.find(img => img.id === "hero-history");
-  const heroGalleryImage = images?.find(img => img.id === "hero-gallery");
   
-  const featureCards = [
-    {
-      title: "Presidential Timeline",
-      description: "Follow the President's journey, from early life to key career milestones.",
-      href: "/timeline",
-      icon: <Presentation className="w-8 h-8 text-primary" />,
-      image: heroTimelineImage
-    },
-    {
-      title: "Key Achievements",
-      description: "Explore the transformative initiatives and progress across various sectors.",
-      href: "/achievements",
-      icon: <Landmark className="w-8 h-8 text-primary" />,
-      image: heroAchievementsImage
-    },
-    {
-      title: "Party History",
-      description: "Learn about the origins, key figures, and historical context of the party.",
-      href: "/history",
-      icon: <ZimbabweBirdIcon className="w-8 h-8 text-primary" />,
-      image: heroHistoryImage
-    },
-    {
-      title: "Image Gallery",
-      description: "A visual journey through significant moments and events.",
-      href: "/gallery",
-      icon: <GalleryHorizontal className="w-8 h-8 text-primary" />,
-      image: heroGalleryImage
-    },
-  ];
-
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -88,8 +85,8 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {featureCards.map((feature) => {
-              const featureImage = feature.image;
+            {featureCardsData.map((feature) => {
+              const featureImage = images?.find(img => img.id === feature.imageId);
               return (
                 <Link href={feature.href} key={feature.title} className="group">
                   <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 border-primary/20">
@@ -102,6 +99,7 @@ export default function Home() {
                             fill
                             className="object-cover"
                             data-ai-hint={featureImage.imageHint}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           />
                         </div>
                       )}
