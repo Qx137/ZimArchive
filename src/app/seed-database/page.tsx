@@ -12,7 +12,7 @@ const placeholderImagesData = {
     {
       id: "hero-main",
       altText: "A majestic view of the Zimbabwe landscape at sunrise.",
-      imageUrl: "https://images.unsplash.com/photo-1505322268928-5f045a47e396?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkcmFtYXRpYyUyMHN1bnNldCUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NjIyOTI0ODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://media.istockphoto.com/id/484818646/photo/early-morning-sunrise.jpg?s=612x612&w=0&k=20&c=-LCkntVTY5mgu36INVI7UooBB1AewHxFzlZ9R_mmOWc=",
       imageHint: "dramatic sunset",
     },
     {
@@ -24,7 +24,7 @@ const placeholderImagesData = {
     {
       id: "hero-achievements",
       altText: "The newly constructed Mbudzi interchange in Harare, an example of modern infrastructure.",
-      imageUrl: "https://images.unsplash.com/photo-1587299484838-524177435f52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBpbmZyYXN0cnVjdHVyZXxlbnwwfHx8fDE3NjIxMjI5ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://prod.cdn-medias.theafricareport.com/cdn-cgi/image/q=auto,f=auto,metadata=none,width=760,fit=cover/https://prod.cdn-medias.theafricareport.com/medias/2025/06/26/trabablas-e1750949880325.jpeg",
       imageHint: "modern infrastructure",
     },
     {
@@ -36,7 +36,7 @@ const placeholderImagesData = {
     {
       id: "hero-gallery",
       altText: "A collection of framed photos on a wall.",
-      imageUrl: "https://images.unsplash.com/photo-1614447412838-3f4ebd5c2dc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaG90byUyMGdhbGxlcnl8ZW58MHx8fHwxNzYxODg5NzAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1614447412838-3f4ebd5c2dc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaG90byUyMGdhbGxlcnl8ZW58MHx8fHwxNzYxODg5NzAyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "photo gallery",
     },
     {
@@ -48,37 +48,37 @@ const placeholderImagesData = {
     {
       id: "gallery-2",
       altText: "President meeting with international investors for a mining deal.",
-      imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzYyMTIyOTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzYyMTIyOTI2fDA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "business meeting",
     },
     {
       id: "gallery-3",
       altText: "President launching a new road construction project.",
-      imageUrl: "https://images.unsplash.com/photo-1520986639249-3c82700a0624?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2FkJTIwY29uc3RydWN0aW9ufGVufDB8fHx8MTc2MjEyMjk2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1520986639249-3c82700a0624?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2FkJTIwY29uc3RydWN0aW9ufGVufDB8fHx8MTc2MjEyMjk2Mnww&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "road construction",
     },
     {
       id: "gallery-4",
       altText: "A large crowd at a ZANU-PF rally.",
-      imageUrl: "https://images.unsplash.com/photo-1589463313938-333ed89c7217?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjByYWxseXxlbnwwfHx8fDE3NjE5ODA2OTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1589463313938-333ed89c7217?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjByYWxseXxlbnwwfHx8fDE3NjE5ODA2OTB8MA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "political rally",
     },
     {
       id: "gallery-5",
       altText: "President visiting a newly equipped hospital wing.",
-      imageUrl: "https://images.unsplash.com/photo-1538108144229-07b463337906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob3NwaXRhbCUyMHdhcmR8ZW58MHx8fHwxNzYyMTIzMDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1538108144229-07b463337906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob3NwaXRhbCUyMHdhcmR8ZW58MHx8fHwxNzYyMTIzMDQyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "hospital ward",
     },
     {
       id: "gallery-6",
       altText: "President inspecting a farm during the Pfumvudza/Intwasa program launch.",
-      imageUrl: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYXJtJTIwaW5zcGVjdGlvbnxlbnwwfHx8fDE3NjIxMjMwODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYXJtJTIwaW5zcGVjdGlvbnxlbnwwfHx8fDE3NjIxMjMwODJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "farm inspection",
     },
     {
       id: "gallery-7",
       altText: "The new Robert Gabriel Mugabe International Airport terminal.",
-      imageUrl: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhirportJTIwdGVybWluYWx8ZW58MHx8fHwxNzYyMTIzMTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhirportJTIwdGVybWluYWx8ZW58MHx8fHwxNzYyMTIzMTIwfDA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "airport terminal",
     },
     {
@@ -90,7 +90,7 @@ const placeholderImagesData = {
     {
       id: "gallery-9",
       altText: "President at the launch of the National Development Strategy 1 (NDS1).",
-      imageUrl: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGxhdW5jaHxlbnwwfHx8fDE3NjIxMjMxODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGxhdW5jaHxlbnwwfHx8fDE3NjIxMjMxODh8MA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "business launch",
     },
     {
@@ -102,13 +102,13 @@ const placeholderImagesData = {
     {
       id: "key-figure-1",
       altText: "A portrait of Robert Mugabe, a key figure in Zimbabwe's history.",
-      imageUrl: "https://images.unsplash.com/photo-1609188737575-de6f9a421e42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG9mJTIwYW4lMjBhZnJpY2FuJTIwbGVhZGVyfGVufDB8fHx8MTc2MjEyMzI4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1609188737575-de6f9a421e42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG9mJTIwYW4lMjBhZnJpY2FuJTIwbGVhZGVyfGVufDB8fHx8MTc2MjEyMzI4N3ww&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "portrait leader",
     },
     {
       id: "key-figure-2",
       altText: "A portrait of Joshua Nkomo, known as 'Father Zimbabwe'.",
-      imageUrl: "https://images.unsplash.com/photo-1610212595059-3b69a25f4a7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG9mJTIwYW4lMjBlbGRlcmx5JTIwYWZyaWNhbiUyMG1hbnxlbnwwfHx8fDE3NjIxMjMzMTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1610212595059-3b69a25f4a7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG9mJTIwYW4lMjBlbGRlcmx5JTIwYWZyaWNhbiUyMG1hbnxlbnwwfHx8fDE3NjIxMjMzMTl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "portrait elder",
     },
     {
@@ -164,5 +164,3 @@ export default function SeedDatabasePage() {
     </div>
   );
 }
-
-    
