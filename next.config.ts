@@ -61,6 +61,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'insiderzim.com' },
       { protocol: 'https', hostname: 'i0.wp.com' },
       { protocol: 'https', hostname: 'startupbiz.co.zw' },
+      { protocol: 'https', hostname: 'media.gettyimages.com' },
     ],
   },
 };
