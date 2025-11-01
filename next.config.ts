@@ -35,7 +35,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: 'https' ,
         hostname: 'media.istockphoto.com',
         port: '',
         pathname: '/**',
@@ -43,6 +43,36 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'prod.cdn-medias.theafricareport.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.zbcnews.co.zw',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'media.cnn.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.guim.co.uk',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.aljazeera.com',
         port: '',
         pathname: '/**',
       }

@@ -12,7 +12,7 @@ const placeholderImagesData = {
     {
       id: "hero-main",
       altText: "A majestic view of the Zimbabwe landscape at sunrise.",
-      imageUrl: "https://images.unsplash.com/photo-1558013533-a3b555e3a890?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxaaW1iYWJ3ZSUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NjIxMjI3MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://media.istockphoto.com/id/484818646/photo/early-morning-sunrise.jpg?s=612x612&w=0&k=20&c=-LCkntVTY5mgu36INVI7UooBB1AewHxFzlZ9R_mmOWc=",
       imageHint: "dramatic sunset",
     },
     {
@@ -36,49 +36,49 @@ const placeholderImagesData = {
     {
       id: "hero-gallery",
       altText: "A collection of framed photos on a wall.",
-      imageUrl: "https://images.unsplash.com/photo-1614447412838-3f4ebd5c2dc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaG90byUyMGdhbGxlcnl8ZW58MHx8fHwxNzYxODg5NzAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1614447412838-3f4ebd5c2dc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaG90byUyMGdhbGxlcnl8ZW58MHx8fHwxNzYxODg5NzAyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "photo gallery",
     },
     {
       id: "gallery-1",
       altText: "President giving a speech at a podium with the national flag.",
-      imageUrl: "https://images.unsplash.com/photo-1609051336245-eac70fc7bac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBzcGVlY2h8ZW58MHx8fHwxNzYxOTkxNTQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1609051336245-eac70fc7bac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBzcGVlY2h8ZW58MHx8fHwxNzYxOTkxNTQ5fDA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "political speech",
     },
     {
       id: "gallery-2",
       altText: "President meeting with international investors for a mining deal.",
-      imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzYyMTIyOTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzYyMTIyOTI2fDA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "business meeting",
     },
     {
       id: "gallery-3",
       altText: "President launching a new road construction project.",
-      imageUrl: "https://images.unsplash.com/photo-1520986639249-3c82700a0624?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2FkJTIwY29uc3RydWN0aW9ufGVufDB8fHx8MTc2MjEyMjk2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1520986639249-3c82700a0624?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2FkJTIwY29uc3RydWN0aW9ufGVufDB8fHx8MTc2MjEyMjk2Mnww&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "road construction",
     },
     {
       id: "gallery-4",
       altText: "A large crowd at a ZANU-PF rally.",
-      imageUrl: "https://images.unsplash.com/photo-1589463313938-333ed89c7217?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjByYWxseXxlbnwwfHx8fDE3NjE5ODA2OTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1589463313938-333ed89c7217?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjByYWxseXxlbnwwfHx8fDE3NjE5ODA2OTB8MA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "political rally",
     },
     {
       id: "gallery-5",
       altText: "President visiting a newly equipped hospital wing.",
-      imageUrl: "https://images.unsplash.com/photo-1538108144229-07b463337906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob3NwaXRhbCUyMHdhcmR8ZW58MHx8fHwxNzYyMTIzMDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1538108144229-07b463337906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob3NwaXRhbCUyMHdhcmR8ZW58MHx8fHwxNzYyMTIzMDQyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "hospital ward",
     },
     {
       id: "gallery-6",
       altText: "President inspecting a farm during the Pfumvudza/Intwasa program launch.",
-      imageUrl: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYXJtJTIwaW5zcGVjdGlvbnxlbnwwfHx8fDE3NjIxMjMwODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYXJtJTIwaW5zcGVjdGlvbnxlbnwwfHx8fDE3NjIxMjMwODJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "farm inspection",
     },
     {
       id: "gallery-7",
       altText: "The new Robert Gabriel Mugabe International Airport terminal.",
-      imageUrl: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhirportJTIwdGVybWluYWx8ZW58MHx8fHwxNzYyMTIzMTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhirportJTIwdGVybWluYWx8ZW58MHx8fHwxNzYyMTIzMTIwfDA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "airport terminal",
     },
     {
@@ -90,19 +90,19 @@ const placeholderImagesData = {
     {
       id: "gallery-9",
       altText: "President at the launch of the National Development Strategy 1 (NDS1).",
-      imageUrl: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGxhdW5jaHxlbnwwfHx8fDE3NjIxMjMxODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGxhdW5jaHxlbnwwfHx8fDE3NjIxMjMxODh8MA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "business launch",
     },
     {
       id: "history-origins",
       altText: "An archival document detailing the formation of ZANU in 1963.",
-      imageUrl: "https://images.unsplash.com/photo-1583445395064-9628a43e4986?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaXN0b3JpY2FsJTIwZG9jdW1lbnR8ZW58MHx8fHwxNzYxOTI4ODU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1583445395064-9628a43e4986?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaXN0b3JpY2FsJTIwZG9jdW1lbnR8ZW58MHx8fHwxNzYxOTI4ODU2fDA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "historical document",
     },
     {
       id: "key-figure-1",
       altText: "A portrait of Robert Mugabe, a key figure in Zimbabwe's history.",
-      imageUrl: "https://images.unsplash.com/photo-1609188737575-de6f9a421e42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG9mJTIwYW4lMjBhZnJpY2FuJTIwbGVhZGVyfGVufDB8fHx8MTc2MjEyMzI4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1609188737575-de6f9a421e42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG9mJTIwYW4lMjBhZnJpY2FuJTIwbGVhZGVyfGVufDB8fHx8MTc2MjEyMzI4N3ww&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "portrait leader",
     },
     {
@@ -114,9 +114,57 @@ const placeholderImagesData = {
     {
       id: "key-figure-3",
       altText: "A portrait of Herbert Chitepo, a nationalist leader.",
-      imageUrl: "https://images.unsplash.com/photo-1580893472468-01373fe4c97e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3J0cmFpdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjE5NDgzMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1580893472468-01373fe4c97e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3J0cmFpdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjE5NDgzMDV8MA&ixlib-rb-4.1.0&q=80&w=1080",
       imageHint: "portrait person",
     },
+    {
+      id: "timeline-1",
+      altText: "A portrait of a young Emmerson Mnangagwa.",
+      imageUrl: "https://picsum.photos/seed/tl1/600/400",
+      imageHint: "vintage portrait",
+    },
+    {
+      id: "timeline-2",
+      altText: "Illustration of a political prisoner behind bars.",
+      imageUrl: "https://picsum.photos/seed/tl2/600/400",
+      imageHint: "prison bars",
+    },
+    {
+      id: "timeline-3",
+      altText: "Archival photo of ZANU members during the liberation struggle.",
+      imageUrl: "https://picsum.photos/seed/tl3/600/400",
+      imageHint: "archival photo",
+    },
+    {
+      id: "timeline-4",
+      altText: "Zimbabwean Parliament building.",
+      imageUrl: "https://picsum.photos/seed/tl4/600/400",
+      imageHint: "parliament building",
+    },
+    {
+      id: "timeline-5",
+      altText: "Official portrait of Emmerson Mnangagwa as Vice President.",
+      imageUrl: "https://picsum.photos/seed/tl5/600/400",
+      imageHint: "official portrait",
+    },
+    {
+      id: "timeline-6",
+      altText: "Emmerson Mnangagwa taking the oath of office in 2017.",
+      imageUrl: "https://www.aljazeera.com/wp-content/uploads/2023/08/33TT9AZ-highres-1-1693132132.jpg?quality=80&resize=770%2C513",
+      imageHint: "presidential inauguration",
+    },
+    {
+      id: "timeline-7",
+      altText: "President Mnangagwa at a campaign rally.",
+      imageUrl: "https://i.guim.co.uk/img/media/e26806b2636b65948c3a0133dde1a9262f98c1f4/0_200_6000_3600/master/6000.jpg?crop=none&dpr=1&s=none&width=465",
+      imageHint: "campaign rally",
+    },
+    {
+      id: "timeline-8",
+      altText: "President Mnangagwa delivering a speech at a recent event.",
+      imageUrl: "https://media.cnn.com/api/v1/images/stellar/prod/171124104634-09-emmerson-mnangagwa-1124.jpg?q=w_3000%2Ch_1902%2Cx_0%2Cy_0%2Cc_fill",
+      imageHint: "official speech",
+    }
   ],
 };
 
