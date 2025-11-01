@@ -35,6 +35,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.voanews.com' },
       { protocol: 'https', hostname: '**.sputniknews.africa' },
       { protocol: 'https', hostname: '**.southernafricantimes.com' },
+      { protocol: 'https', hostname: 'nehandaradio.com' },
       { protocol: 'https', hostname: '**.nehandaradio.com' },
       { protocol: 'https', hostname: '**.newziana.co.zw' },
       { protocol: 'https', hostname: '**.insiderzim.com' },
