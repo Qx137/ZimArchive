@@ -26,6 +26,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.aljazeera.com' },
       { protocol: 'https', hostname: '**.pindula.co.zw' },
       { protocol: 'https', hostname: '**.herald.co.zw' },
+      { protocol: 'https', hostname: 'www.heraldonline.co.zw' },
       { protocol: 'https', hostname: '**.zbcnews.co.zw' },
       { protocol: 'https', hostname: '**.zimlive.com' },
       { protocol: 'https', hostname: '**.zimeye.net' },
