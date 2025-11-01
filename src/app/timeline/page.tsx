@@ -55,18 +55,27 @@ export default function TimelinePage() {
           </p>
         </div>
 
-        <div className="relative wrap overflow-hidden p-10 h-full">
-          <div className="absolute border-opacity-20 border-primary/20 h-full border" style={{ left: "50%" }}></div>
+        <div className="relative wrap overflow-hidden p-4 md:p-10 h-full">
+          <div className="absolute border-opacity-20 border-primary/20 h-full border-2 left-5 md:left-1/2 md:-translate-x-1/2"></div>
+          
           {timelineData.map((item, index) => (
-            <div key={item.year} className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'flex-row-reverse left-timeline' : 'right-timeline'}`}>
-              <div className="order-1 w-5/12"></div>
-              <div className="z-20 flex items-center order-1 bg-accent shadow-xl w-12 h-12 rounded-full">
+            <div key={item.year} className="mb-8 flex md:justify-between items-center w-full flex-col md:flex-row">
+              {/* Desktop: right side */}
+              <div className="hidden md:flex order-1 w-5/12"></div>
+              
+              {/* Mobile: empty div for spacing */}
+              <div className="order-1 w-full md:w-5/12 md:hidden"></div>
+
+              {/* Icon */}
+              <div className="z-20 flex items-center order-1 bg-accent shadow-xl w-12 h-12 rounded-full absolute left-5 -translate-x-1/2 md:relative md:left-auto md:translate-x-0">
                 <Presentation className="mx-auto text-primary font-bold text-lg w-6 h-6" />
               </div>
-              <div className="order-1 w-5/12 px-6 py-4">
-                <Card className="shadow-lg hover:shadow-2xl transition-shadow duration-300 border-primary/20 bg-card">
+
+              {/* Card */}
+              <div className="order-1 w-full md:w-5/12 pl-12 md:pl-6 md:pr-0 py-4">
+                 <Card className="shadow-lg hover:shadow-2xl transition-shadow duration-300 border-primary/20 bg-card">
                   <CardHeader>
-                    <CardTitle className="mb-2 text-primary font-headline text-2xl">
+                    <CardTitle className="mb-2 text-primary font-headline text-xl md:text-2xl">
                       {item.year}: {item.title}
                     </CardTitle>
                   </CardHeader>

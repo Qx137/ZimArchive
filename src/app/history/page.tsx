@@ -26,10 +26,10 @@ export default function HistoryPage() {
                 <section className="mb-20">
                     <Card className="overflow-hidden shadow-xl border-primary/20">
                         <div className="grid grid-cols-1 md:grid-cols-2">
-                             <div className="p-8 md:p-12 flex flex-col justify-center">
+                             <div className="p-6 md:p-12 flex flex-col justify-center">
                                 <div className="flex items-center mb-4">
-                                    <BookOpen className="w-10 h-10 text-accent mr-4" />
-                                    <h2 className="text-4xl font-headline text-primary">The Origins</h2>
+                                    <BookOpen className="w-8 h-8 md:w-10 md:h-10 text-accent mr-4" />
+                                    <h2 className="text-3xl md:text-4xl font-headline text-primary">The Origins</h2>
                                 </div>
                                 <p className="font-body text-muted-foreground leading-relaxed mt-4">
                                     The party was forged in the crucible of the liberation struggle, born from a collective desire for sovereignty, freedom, and justice. Its foundations were laid by nationalist pioneers who envisioned a unified and prosperous Zimbabwe, free from the shackles of colonialism. The core ideology centered on land reform, economic independence, and majority rule, principles that mobilized millions and continue to guide the party's mission.
@@ -54,7 +54,7 @@ export default function HistoryPage() {
                 <section className="mb-20">
                     <div className="text-center mb-12">
                         <Users className="w-12 h-12 text-accent mx-auto mb-4" />
-                        <h2 className="text-4xl font-headline text-primary">Key Figures</h2>
+                        <h2 className="text-3xl md:text-4xl font-headline text-primary">Key Figures</h2>
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-2">
                             The architects and pioneers who shaped the party's journey.
                         </p>
@@ -66,7 +66,7 @@ export default function HistoryPage() {
                                 <Card key={figure.name} className="text-center shadow-lg hover:shadow-2xl transition-shadow duration-300 border-primary/20">
                                     <CardHeader>
                                         {figureImage && (
-                                            <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-accent">
+                                            <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden border-4 border-accent">
                                             <Image
                                                 src={figureImage.imageUrl}
                                                 alt={figureImage.description}
@@ -78,7 +78,7 @@ export default function HistoryPage() {
                                         )}
                                     </CardHeader>
                                     <CardContent>
-                                        <CardTitle className="font-headline text-2xl text-primary">{figure.name}</CardTitle>
+                                        <CardTitle className="font-headline text-xl md:text-2xl text-primary">{figure.name}</CardTitle>
                                         <CardDescription className="font-body text-base text-muted-foreground mt-2">{figure.description}</CardDescription>
                                     </CardContent>
                                 </Card>
@@ -91,7 +91,7 @@ export default function HistoryPage() {
                 <section>
                     <div className="text-center mb-12">
                         <Milestone className="w-12 h-12 text-accent mx-auto mb-4" />
-                        <h2 className="text-4xl font-headline text-primary">Historical Milestones</h2>
+                        <h2 className="text-3xl md:text-4xl font-headline text-primary">Historical Milestones</h2>
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-2">
                             Pivotal moments that defined the party and the nation.
                         </p>

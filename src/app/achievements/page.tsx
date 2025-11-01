@@ -36,14 +36,14 @@ export default function AchievementsPage() {
 
         <Tabs defaultValue="economy" className="w-full">
           <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 bg-primary/10 p-2 h-auto">
-            <TabsTrigger value="economy" className="py-2 text-lg data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=active]:shadow-md">
-              <DollarSign className="mr-2"/> Economy
+            <TabsTrigger value="economy" className="py-2 text-md md:text-lg data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=active]:shadow-md">
+              <DollarSign className="mr-2 h-5 w-5"/> Economy
             </TabsTrigger>
-            <TabsTrigger value="education" className="py-2 text-lg data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=active]:shadow-md">
-              <GraduationCap className="mr-2"/> Education
+            <TabsTrigger value="education" className="py-2 text-md md:text-lg data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=active]:shadow-md">
+              <GraduationCap className="mr-2 h-5 w-5"/> Education
             </TabsTrigger>
-            <TabsTrigger value="health" className="py-2 text-lg data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=active]:shadow-md">
-              <HeartPulse className="mr-2"/> Health
+            <TabsTrigger value="health" className="py-2 text-md md:text-lg data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=active]:shadow-md">
+              <HeartPulse className="mr-2 h-5 w-5"/> Health
             </TabsTrigger>
           </TabsList>
           

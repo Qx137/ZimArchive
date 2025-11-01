@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] text-white">
+      <section className="relative w-full h-[70vh] md:h-[60vh] text-white">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -53,12 +53,12 @@ export default function Home() {
             data-ai-hint={heroImage.imageHint}
           />
         )}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative h-full flex flex-col items-center justify-center text-center p-4">
-          <h1 className="text-5xl md:text-7xl font-headline text-accent mb-4 tracking-wider">
+          <h1 className="text-4xl md:text-7xl font-headline text-accent mb-4 tracking-wider">
             A Legacy of Progress
           </h1>
-          <p className="max-w-3xl text-lg md:text-xl font-body text-background/90">
+          <p className="max-w-3xl text-md md:text-xl font-body text-background/90">
             Discover the enduring legacy of Zimbabwe's leadership. Explore the history, achievements, and timeline of the President and his party.
           </p>
           <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg">
