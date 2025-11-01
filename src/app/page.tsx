@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ZimbabweBirdIcon } from "@/components/icons/zimbabwe-bird";
 import { useImages } from "@/hooks/use-images";
+import heroMainImage from "@/img/hero-main.jpg";
 
 const featureCardsData = [
   {
@@ -47,17 +48,14 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] md:h-[60vh] text-white">
-        {images?.find(img => img.id === "hero-main") && (
-          <Image
-            src={images?.find(img => img.id === "hero-main")!.imageUrl}
-            alt={images?.find(img => img.id === "hero-main")!.altText}
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-            data-ai-hint={images?.find(img => img.id === "hero-main")!.imageHint}
-          />
-        )}
+        <Image
+          src={heroMainImage}
+          alt="A majestic view of the Zimbabwe landscape at sunrise."
+          fill
+          className="object-cover"
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative h-full flex flex-col items-center justify-center text-center p-4">
           <h1 className="text-4xl md:text-7xl font-headline text-accent mb-4 tracking-wider">
