@@ -211,7 +211,7 @@ const placeholderImagesData = {
     {
       id: "ideology-structure-2",
       altText: "A ZANU-PF rally.",
-      imageUrl: "https://news.pindula.co.zw/wp-content/uploads/2017/11/zanu-pf-building-hq.jpg",
+      imageUrl: "https://www.zimbabwesituation.com/wp-content/uploads/2023/08/Zanu-PF-rally.jpg",
       imageHint: "political rally",
     },
     {
