@@ -27,7 +27,7 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'picsum.photos',
         port: '',
-        pathname: '/**',
+pathname: '/**',
       },
       {
         protocol: 'https',
@@ -138,7 +138,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: 'https| |',
         hostname: 'www.zimbabwesituation.com',
         port: '',
         pathname: '/**',
@@ -190,11 +190,15 @@ const nextConfig: NextConfig = {
         hostname: 'pbs.twimg.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'gdb.voanews.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
 };
 
 export default nextConfig;
-
-    
