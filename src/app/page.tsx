@@ -4,6 +4,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ArrowRight, BookOpen, GalleryHorizontal, Landmark, Presentation } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { ZimbabweBirdIcon } from "@/components/icons/zimbabwe-bird";
 
 const featureCards = [
   {
@@ -24,7 +25,7 @@ const featureCards = [
     title: "Party History",
     description: "Learn about the origins, key figures, and historical context of the party.",
     href: "/history",
-    icon: <BookOpen className="w-8 h-8 text-primary" />,
+    icon: <ZimbabweBirdIcon className="w-8 h-8 text-primary" />,
     image: PlaceHolderImages.find(img => img.id === "hero-history")
   },
   {
