@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { ZimbabweBirdIcon } from "../icons/zimbabwe-bird";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Button } from "../ui/button";
 import { Menu } from "lucide-react";
+import { ZimbabweBirdIcon } from "../icons/zimbabwe-bird";
 
 const navLinks = [
   { href: "/", label: "Home" },
