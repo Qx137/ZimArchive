@@ -19,24 +19,6 @@ const gallerySections = [
     imageIds: ["gallery-investors-1", "gallery-investors-2", "gallery-investors-3", "gallery-investors-4", "gallery-investors-5", "gallery-investors-6"],
   },
   {
-    id: "infrastructure",
-    title: "Launching Road Construction Projects",
-    context: "Infrastructure is a recurring theme in his government’s communication — new roads, dual carriageways, transport upgrades tied to the vision of economic revival and connectivity.",
-    imageIds: ["gallery-infra-1", "gallery-infra-2", "gallery-infra-3", "gallery-infra-4", "gallery-infra-5", "gallery-infra-6"],
-  },
-  {
-    id: "rally",
-    title: "ZANU-PF Political Rallies",
-    context: "Political mass events remain core to party politics in Zimbabwe. These large gatherings communicate strength, support, and mobilisation — especially during election campaigns or major party announcements.",
-    imageIds: ["gallery-rally-1", "gallery-rally-2", "gallery-rally-3", "gallery-rally-4", "gallery-rally-5", "gallery-rally-6"],
-  },
-  {
-    id: "health",
-    title: "Visiting Newly Equipped Hospitals",
-    context: "Showcases the social service dimension — health, welfare and public service improvement are important for legitimacy and demonstrating government commitment beyond politics and economics.",
-    imageIds: ["gallery-health-1", "gallery-health-2", "gallery-health-3", "gallery-health-4", "gallery-health-5", "gallery-health-6"],
-  },
-  {
     id: "agriculture",
     title: "Inspecting Pfumvudza/Intwasa Programme",
     context: "Agriculture remains central to Zimbabwe’s economy and identity. The Pfumvudza/Intwasa scheme is part of efforts to revitalise farming, so a presidential inspection highlights prioritisation of rural development and food security.",
@@ -47,12 +29,6 @@ const gallerySections = [
     title: "New R.G. Mugabe International Airport Terminal",
     context: "Infrastructure of national significance — modern airport terminals signal connectivity, investment readiness, and national image. It's also a symbol of progress and ambition in global terms.",
     imageIds: ["gallery-airport-1", "gallery-airport-2", "gallery-airport-3", "gallery-airport-4", "gallery-airport-5", "gallery-airport-6"],
-  },
-  {
-    id: "education",
-    title: "Graduation at University Innovation Hub",
-    context: "Education and innovation are vital for a transition to a knowledge-based economy. These images underline efforts to shift from raw resource dependence toward high-value, skills-driven sectors.",
-    imageIds: ["gallery-edu-1", "gallery-edu-2", "gallery-edu-3", "gallery-edu-4", "gallery-edu-5", "gallery-edu-6"],
   },
   {
     id: "nds1",
