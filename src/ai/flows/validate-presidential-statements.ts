@@ -7,9 +7,7 @@
  * - ValidateStatementOutput - The return type for the validateStatement function.
  */
 
-import {generate} from 'genkit/ai';
-import {defineFlow, AIFunction} from 'genkit/flow';
-import {gemini} from '@/ai/genkit';
+import {ai} from '@/ai/genkit';
 import {z} from 'zod';
 
 const ValidateStatementInputSchema = z.object({
@@ -37,18 +35,15 @@ export async function validateStatement(
   return validateStatementFlow(input);
 }
 
-const validateStatementFlow: AIFunction<
-  typeof ValidateStatementInputSchema,
-  typeof ValidateStatementOutputSchema
-> = defineFlow(
+const validateStatementFlow = ai.defineFlow(
   {
     name: 'validateStatementFlow',
     inputSchema: ValidateStatementInputSchema,
     outputSchema: ValidateStatementOutputSchema,
   },
   async input => {
-    const llmResponse = await generate({
-      model: gemini,
+    const llmResponse = await ai.generate({
+      model: 'gemini-1.5-flash',
       prompt: `You are an expert fact-checker specializing in Zimbabwean politics.
 
 You will use your knowledge and access to reliable sources to check the validity of the following statement.
@@ -63,6 +58,6 @@ Set the isValid output field appropriately.`,
       },
     });
 
-    return llmResponse.output()!;
+    return llmResponse.output!;
   }
 );
