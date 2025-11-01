@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import { Presentation } from "lucide-react";
 
 const timelineData = [
@@ -48,7 +49,7 @@ export default function TimelinePage() {
   return (
     <div className="bg-background min-h-screen">
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-headline text-primary mb-4">Presidential Timeline</h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             A chronological journey through the life, career, and key moments of the President of Zimbabwe.
@@ -56,35 +57,47 @@ export default function TimelinePage() {
         </div>
 
         <div className="relative wrap overflow-hidden p-4 md:p-10 h-full">
-          <div className="absolute border-opacity-20 border-primary/20 h-full border-2 left-5 md:left-1/2 md:-translate-x-1/2"></div>
+          <div className="absolute border-opacity-20 border-primary/40 h-full border-2 left-5 md:left-1/2 md:-translate-x-1/2"></div>
           
           {timelineData.map((item, index) => (
-            <div key={item.year} className="mb-8 flex md:justify-between items-center w-full flex-col md:flex-row">
-              {/* Desktop: right side */}
-              <div className="hidden md:flex order-1 w-5/12"></div>
-              
-              {/* Mobile: empty div for spacing */}
-              <div className="order-1 w-full md:w-5/12 md:hidden"></div>
-
-              {/* Icon */}
-              <div className="z-20 flex items-center order-1 bg-accent shadow-xl w-12 h-12 rounded-full absolute left-5 -translate-x-1/2 md:relative md:left-auto md:translate-x-0">
-                <Presentation className="mx-auto text-primary font-bold text-lg w-6 h-6" />
-              </div>
-
+            <div key={item.year} className={cn(
+              "mb-8 flex w-full items-center",
+              index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
+            )}>
               {/* Card */}
-              <div className="order-1 w-full md:w-5/12 pl-12 md:pl-6 md:pr-0 py-4">
+              <div className={cn(
+                "order-1 w-full md:w-5/12 py-4",
+                index % 2 === 0 ? "md:pl-12" : "md:pr-12"
+              )}>
                  <Card className="shadow-lg hover:shadow-2xl transition-shadow duration-300 border-primary/20 bg-card">
                   <CardHeader>
-                    <CardTitle className="mb-2 text-primary font-headline text-xl md:text-2xl">
+                    <CardTitle className={cn(
+                      "mb-2 text-primary font-headline text-xl md:text-2xl",
+                      index % 2 === 0 ? "md:text-left" : "md:text-right"
+                    )}>
                       {item.year}: {item.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground font-body leading-relaxed">
+                    <p className={cn(
+                      "text-muted-foreground font-body leading-relaxed",
+                       index % 2 === 0 ? "md:text-left" : "md:text-right"
+                    )}>
                       {item.description}
                     </p>
                   </CardContent>
                 </Card>
+              </div>
+
+              {/* Spacer */}
+              <div className="order-1 hidden md:block md:w-2/12"></div>
+
+               {/* Icon */}
+               <div className={cn(
+                "z-20 flex items-center order-1 bg-accent shadow-xl w-12 h-12 rounded-full",
+                "absolute left-5 -translate-x-1/2 md:relative md:left-auto md:translate-x-0"
+               )}>
+                <Presentation className="mx-auto text-primary font-bold text-lg w-6 h-6" />
               </div>
             </div>
           ))}
