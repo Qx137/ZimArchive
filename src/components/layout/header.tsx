@@ -56,7 +56,7 @@ export function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-primary text-primary-foreground border-l-primary/50">
+            <SheetContent side="right" className="w-[40vw] bg-primary text-primary-foreground border-l-primary/50">
               <nav className="flex flex-col space-y-6 pt-10">
                 {navLinks.map((link) => (
                    <Link href={link.href} key={`mobile-${link.href}`}>
