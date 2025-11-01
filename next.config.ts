@@ -17,18 +17,12 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'placehold.co' },
       { protocol: 'https', hostname: 'media.gettyimages.com' },
       { protocol: 'https', hostname: 'upload.wikimedia.org' },
-      { protocol: 'https', hostname: 's3-eu-west-2.amazonaws.com' },
-      { protocol: 'https', hostname: 'i0.wp.com' },
       { protocol: 'https', hostname: 'cdn.britannica.com' },
       { protocol: 'https', hostname: 'pbs.twimg.com' },
       { protocol: 'https', hostname: 'omo-oss-image.thefastimg.com' },
-      { protocol: 'https', hostname: 'hurumende.com' },
-      { protocol: 'https', hostname: 'zimbabweanpatriot.co.zw' },
-      { protocol: 'https', hostname: 'zanupf.org.zw' },
-      { protocol: 'https', hostname: 'resa.aero' },
-      { protocol: 'https', hostname: 'apta.biz' },
-      { protocol: 'https', hostname: 'cite.org.zw' },
-
+      { protocol: 'https', hostname: 's3-eu-west-2.amazonaws.com' },
+      { protocol: 'https', hostname: 'i0.wp.com' },
+      
       // Publication Wildcards
       { protocol: 'https', hostname: '**.aljazeera.com' },
       { protocol: 'https', hostname: '**.pindula.co.zw' },
@@ -54,12 +48,18 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.insiderzim.com' },
       { protocol: 'https', hostname: '**.startupbiz.co.zw' },
       { protocol: 'https', hostname: '**.boell.de' },
-      { protocol: 'https', hostname: '**.acz.co.zw' },
-      { protocol: 'https', hostname: '**.infomin.org.zw' },
-      { protocol: 'https', hostname: '**.freightnews.co.za' },
-      { protocol: 'https', hostname: '**.hit.ac.zw' },
       
       // Other Specific Domains
+      { protocol: 'https', hostname: 'hurumende.com' },
+      { protocol: 'https', hostname: 'zimbabweanpatriot.co.zw' },
+      { protocol: 'https', hostname: 'zanupf.org.zw' },
+      { protocol: 'https', hostname: 'resa.aero' },
+      { protocol: 'https', hostname: 'apta.biz' },
+      { protocol: 'https', hostname: 'cite.org.zw' },
+      { protocol: 'https', hostname: 'acz.co.zw' },
+      { protocol: 'https', hostname: 'infomin.org.zw' },
+      { protocol: 'https', hostname: 'freightnews.co.za' },
+      { protocol: 'https', hostname: 'hit.ac.zw' },
       { protocol: 'https', hostname: 'www.tandfonline.com' },
       { protocol: 'https', hostname: 'www.english.ox.ac.uk' },
       { protocol: 'https', hostname: 'www.colonialrelic.com' },
@@ -69,12 +69,10 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'images.routledge.com' },
     ],
   },
-  // This is required for the dev environment to work correctly.
   experimental: {
-    // NOTE: `allowedDevOrigins` is deprecated and has been moved to the top level.
-    // The new property `experimental.allowedDevOrigins` is left here intentionally
-    // in case of older Next.js versions, but the top-level one will be used.
+    // This is required for the dev environment to work correctly.
   },
+  // The new property `allowedDevOrigins` is at the top level.
   allowedDevOrigins: [
     "https://*.cluster-fbfjltn375c6wqxlhoehbz44sk.cloudworkstations.dev",
   ],
