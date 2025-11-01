@@ -54,6 +54,7 @@ export default function Home() {
             fill
             className="object-cover"
             priority
+            sizes="100vw"
             data-ai-hint={images?.find(img => img.id === "hero-main")!.imageHint}
           />
         )}
