@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -11,8 +12,8 @@ const placeholderImagesData = {
   placeholderImages: [
     {
       id: "hero-main",
-      altText: "A majestic view of the Zimbabwe landscape at sunrise.",
-      imageUrl: "https://media.istockphoto.com/id/484818646/photo/early-morning-sunrise.jpg?s=612x612&w=0&k=20&c=-LCkntVTY5mgu36INVI7UooBB1AewHxFzlZ9R_mmOWc=",
+      altText: "A dramatic, colorful sunset over the Zimbabwean landscape.",
+      imageUrl: "https://images.unsplash.com/photo-1544198422-33759a229352?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       imageHint: "dramatic sunset",
     },
     {
@@ -24,7 +25,7 @@ const placeholderImagesData = {
     {
       id: "hero-achievements",
       altText: "The newly constructed Mbudzi interchange in Harare, an example of modern infrastructure.",
-      imageUrl: "https://images.unsplash.com/photo-1519994994042-5f6f6b53b825?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      imageUrl: "https://images.unsplash.com/photo-1611911029245-a8a2f3b9c245?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       imageHint: "modern infrastructure",
     },
     {
@@ -36,43 +37,43 @@ const placeholderImagesData = {
     {
       id: "hero-gallery",
       altText: "A collection of framed photos on a wall.",
-      imageUrl: "https://images.unsplash.com/photo-1614447412838-3f4ebd5c2dc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaG90byUyMGdhbGxlcnl8ZW58MHx8fHwxNzYxODg5NzAyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1614447412838-3f4ebd5c2dc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaG90byUyMGdhbGxlcnl8ZW58MHx8fHwxNzYxODg5NzAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       imageHint: "photo gallery",
     },
     {
       id: "gallery-1",
       altText: "President giving a speech at a podium with the national flag.",
-      imageUrl: "https://images.unsplash.com/photo-1609051336245-eac70fc7bac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBzcGVlY2h8ZW58MHx8fHwxNzYxOTkxNTQ5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1609051336245-eac70fc7bac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBzcGVlY2h8ZW58MHx8fHwxNzYxOTkxNTQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       imageHint: "political speech",
     },
     {
       id: "gallery-2",
       altText: "President meeting with international investors for a mining deal.",
-      imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzYyMTIyOTI2fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzYyMTIyOTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       imageHint: "business meeting",
     },
     {
       id: "gallery-3",
       altText: "President launching a new road construction project.",
-      imageUrl: "https://images.unsplash.com/photo-1520986639249-3c82700a0624?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2FkJTIwY29uc3RydWN0aW9ufGVufDB8fHx8MTc2MjEyMjk2Mnww&ixlib-rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1520986639249-3c82700a0624?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2FkJTIwY29uc3RydWN0aW9ufGVufDB8fHx8MTc2MjEyMjk2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       imageHint: "road construction",
     },
     {
       id: "gallery-4",
       altText: "A large crowd at a ZANU-PF rally.",
-      imageUrl: "https://images.unsplash.com/photo-1589463313938-333ed89c7217?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjByYWxseXxlbnwwfHx8fDE3NjE5ODA2OTB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1589463313938-333ed89c7217?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjByYWxseXxlbnwwfHx8fDE3NjE5ODA2OTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       imageHint: "political rally",
     },
     {
       id: "gallery-5",
       altText: "President visiting a newly equipped hospital wing.",
-      imageUrl: "https://images.unsplash.com/photo-1538108144229-07b463337906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob3NwaXRhbCUyMHdhcmR8ZW58MHx8fHwxNzYyMTIzMDQyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1538108144229-07b463337906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob3NwaXRhbCUyMHdhcmR8ZW58MHx8fHwxNzYyMTIzMDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       imageHint: "hospital ward",
     },
     {
       id: "gallery-6",
       altText: "President inspecting a farm during the Pfumvudza/Intwasa program launch.",
-      imageUrl: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYXJtJTIwaW5zcGVjdGlvbnxlbnwwfHx8fDE3NjIxMjMwODJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      imageUrl: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYXJtJTIwaW5zcGVjdGlvbnxlbnwwfHx8fDE3NjIxMjMwODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       imageHint: "farm inspection",
     },
     {
@@ -94,57 +95,33 @@ const placeholderImagesData = {
       imageHint: "business launch",
     },
     {
-      id: "history-origins",
-      altText: "An archival document detailing the formation of ZANU in 1963.",
-      imageUrl: "https://images.unsplash.com/photo-1583445395064-9628a43e4986?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaXN0b3JpY2FsJTIwZG9jdW1lbnR8ZW58MHx8fHwxNzYxOTI4ODU2fDA&ixlib-rb-4.1.0&q=80&w=1080",
-      imageHint: "historical document",
-    },
-    {
-      id: "key-figure-1",
-      altText: "A portrait of Robert Mugabe, a key figure in Zimbabwe's history.",
-      imageUrl: "https://images.unsplash.com/photo-1609188737575-de6f9a421e42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG9mJTIwYW4lMjBhZnJpY2FuJTIwbGVhZGVyfGVufDB8fHx8MTc2MjEyMzI4N3ww&ixlib-rb-4.1.0&q=80&w=1080",
-      imageHint: "portrait leader",
-    },
-    {
-      id: "key-figure-2",
-      altText: "A portrait of Joshua Nkomo, known as 'Father Zimbabwe'.",
-      imageUrl: "https://images.unsplash.com/photo-1610212595059-3b69a25f4a7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG9mJTIwYW4lMjBlbGRlcmx5JTIwYWZyaWNhbiUyMG1hbnxlbnwwfHx8fDE3NjIxMjMzMTl8MA&ixlib-rb-4.1.0&q=80&w=1080",
-      imageHint: "portrait elder",
-    },
-    {
-      id: "key-figure-3",
-      altText: "A portrait of Herbert Chitepo, a nationalist leader.",
-      imageUrl: "https://images.unsplash.com/photo-1580893472468-01373fe4c97e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3J0cmFpdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjE5NDgzMDV8MA&ixlib-rb-4.1.0&q=80&w=1080",
-      imageHint: "portrait person",
-    },
-    {
       id: "timeline-1",
-      altText: "A portrait of a young Emmerson Mnangagwa.",
-      imageUrl: "https://picsum.photos/seed/tl1/600/400",
+      altText: "Emmerson Mnangagwa during his early years.",
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/31/Emmerson_Mnangagwa_Official_Portrait.jpg",
       imageHint: "vintage portrait",
     },
     {
       id: "timeline-2",
-      altText: "Illustration of a political prisoner behind bars.",
-      imageUrl: "https://picsum.photos/seed/tl2/600/400",
-      imageHint: "prison bars",
+      altText: "Guerrilla fighters during the Rhodesian Bush War.",
+      imageUrl: "https://images.unsplash.com/photo-1520176059343-3e3901b6a73c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      imageHint: "liberation war",
     },
     {
       id: "timeline-3",
-      altText: "Archival photo of ZANU members during the liberation struggle.",
-      imageUrl: "https://picsum.photos/seed/tl3/600/400",
-      imageHint: "archival photo",
+      altText: "Robert Mugabe and other ZANU leaders in the 1970s.",
+      imageUrl: "https://images.unsplash.com/photo-1604213410145-54652c77f0d4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      imageHint: "historical leaders",
     },
     {
       id: "timeline-4",
-      altText: "Zimbabwean Parliament building.",
-      imageUrl: "https://picsum.photos/seed/tl4/600/400",
+      altText: "The Zimbabwean Parliament building in Harare.",
+      imageUrl: "https://images.unsplash.com/photo-1613926987422-7f720370a254?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       imageHint: "parliament building",
     },
     {
       id: "timeline-5",
-      altText: "Official portrait of Emmerson Mnangagwa as Vice President.",
-      imageUrl: "https://picsum.photos/seed/tl5/600/400",
+      altText: "Official portrait of Emmerson Mnangagwa.",
+      imageUrl: "https://www.zbcnews.co.zw/wp-content/uploads/2024/09/IMG-20240901-WA0147.jpg",
       imageHint: "official portrait",
     },
     {
@@ -164,6 +141,72 @@ const placeholderImagesData = {
       altText: "President Mnangagwa delivering a speech at a recent event.",
       imageUrl: "https://media.cnn.com/api/v1/images/stellar/prod/171124104634-09-emmerson-mnangagwa-1124.jpg?q=w_3000%2Ch_1902%2Cx_0%2Cy_0%2Cc_fill",
       imageHint: "official speech",
+    },
+    {
+      id: "history-origins-2",
+      altText: "A graphic showing the split of ZAPU and the formation of ZANU.",
+      imageUrl: "https://www.tandfonline.com/cms/asset/775c8bd9-2a79-42aa-a41a-f2db27fe7d2c/cjss_a_1281040_f0001_oc.gif",
+      imageHint: "historical chart",
+    },
+    {
+      id: "key-figure-mugabe",
+      altText: "Robert Mugabe and Joshua Nkomo, two key figures in Zimbabwe's liberation.",
+      imageUrl: "https://www.victoriafalls-guide.net/images/nkomo-and-mugabe.jpg",
+      imageHint: "historical leaders",
+    },
+    {
+      id: "key-figure-nkomo",
+      altText: "A portrait of Joshua Nkomo, leader of ZAPU.",
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/01/Joshua_Nkomo_%281978%29.jpg",
+      imageHint: "portrait leader",
+    },
+    {
+      id: "key-figure-chitepo",
+      altText: "A portrait of Herbert Chitepo, the first black barrister in Rhodesia.",
+      imageUrl: "https://www.dandaro.online/wp-content/uploads/2025/06/herbert-chitepo.jpg",
+      imageHint: "portrait lawyer",
+    },
+    {
+      id: "milestone-struggle",
+      altText: "ZANLA combatants during the liberation struggle.",
+      imageUrl: "https://www.zimbabwesituation.com/wp-content/uploads/2017/11/21zimbabwe-personal1-superJumbo.jpg",
+      imageHint: "liberation fighters",
+    },
+    {
+      id: "milestone-independence",
+      altText: "Celebrations on Zimbabwe's Independence Day in 1980.",
+      imageUrl: "https://www.victoriafalls-guide.net/image-files/zimbabwe-independence-day.jpg",
+      imageHint: "independence celebration",
+    },
+    {
+      id: "milestone-unity",
+      altText: "Robert Mugabe and Joshua Nkomo signing the Unity Accord in 1987.",
+      imageUrl: "https://cite.org.zw/wp-content/uploads/2024/12/Mugabe-NKOMO.jpg",
+      imageHint: "political agreement",
+    },
+    {
+      id: "milestone-land-reform",
+      altText: "A farmer on a redistributed farm in Zimbabwe.",
+      imageUrl: "https://www.zimbabwesituation.com/wp-content/uploads/2019/12/Zimbabwe-Farm-Invasions.jpeg",
+      imageHint: "farming land",
+    },
+    {
+      id: "milestone-new-dispensation",
+      altText: "Emmerson Mnangagwa being sworn in as President in 2017.",
+      imageUrl: "https://www.aljazeera.com/wp-content/uploads/2023/08/33TT9AZ-highres-1-1693132132.jpg?quality=80&resize=770%2C513",
+      imageHint: "presidential inauguration",
+    },
+    {
+      id: "ideology-structure",
+      altText: "The ZANU-PF headquarters building in Harare.",
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/fe/Zanu_PF_Building.jpg",
+      imageHint: "political building",
+    },
+    {
+      id: "challenges-turning-points",
+      altText: "A crowd of opposition supporters at a rally.",
+      imageUrl: "https://images.unsplash.com/photo-1549492423-4002122c3753?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      imageHint: "political rally",
     }
   ],
 };
@@ -212,3 +255,5 @@ export default function SeedDatabasePage() {
     </div>
   );
 }
+
+    
