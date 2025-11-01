@@ -1,3 +1,118 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-main",
+      "description": "A majestic view of the Zimbabwe landscape at sunrise.",
+      "imageUrl": "https://images.unsplash.com/photo-1708476146651-b66d704f643c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxaaW1iYWJ3ZSUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NjE5OTE1NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Zimbabwe landscape"
+    },
+    {
+      "id": "hero-timeline",
+      "description": "An old, weathered book open to a page with handwritten notes.",
+      "imageUrl": "https://images.unsplash.com/photo-1472173148041-00294f0814a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaXN0b3J5JTIwYm9va3xlbnwwfHx8fDE3NjE5OTE1NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "history book"
+    },
+    {
+      "id": "hero-achievements",
+      "description": "A modern cityscape with new buildings under construction.",
+      "imageUrl": "https://images.unsplash.com/photo-1567449303183-ae0d6ed1498e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjBjaXR5fGVufDB8fHx8MTc2MTk0ODA1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern city"
+    },
+    {
+      "id": "hero-history",
+      "description": "A vintage black and white photograph of a political gathering.",
+      "imageUrl": "https://images.unsplash.com/photo-1576858688752-d7d4dbd6686a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxoaXN0b3JpY2FsJTIwcGhvdG98ZW58MHx8fHwxNzYxOTkxNTQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "historical photo"
+    },
+    {
+      "id": "hero-gallery",
+      "description": "A collection of framed photos on a wall.",
+      "imageUrl": "https://images.unsplash.com/photo-1614447412838-3f4ebd5c2dc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaG90byUyMGdhbGxlcnl8ZW58MHx8fHwxNzYxODg5NzAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "photo gallery"
+    },
+    {
+      "id": "hero-fact-checker",
+      "description": "A person using a magnifying glass to examine a document.",
+      "imageUrl": "https://images.unsplash.com/photo-1516382799247-87df95d790b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYWduaWZ5aW5nJTIwZ2xhc3N8ZW58MHx8fHwxNzYxOTczODg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "magnifying glass"
+    },
+    {
+      "id": "gallery-1",
+      "description": "President giving a speech at a podium.",
+      "imageUrl": "https://images.unsplash.com/photo-1761001826702-1e2b20a32507?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBzcGVlY2h8ZW58MHx8fHwxNzYxOTkxNTQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "political speech"
+    },
+    {
+      "id": "gallery-2",
+      "description": "President meeting with foreign dignitaries.",
+      "imageUrl": "https://images.unsplash.com/photo-1713930517076-18a9fd284cfb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxvZmZpY2lhbCUyMG1lZXRpbmd8ZW58MHx8fHwxNzYxOTkxNTUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "official meeting"
+    },
+    {
+      "id": "gallery-3",
+      "description": "President cutting a ribbon at an inauguration ceremony.",
+      "imageUrl": "https://images.unsplash.com/photo-1692175478166-377d3f03a31a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8b3BlbmluZyUyMGNlcmVtb255fGVufDB8fHx8MTc2MTk5MTU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "opening ceremony"
+    },
+    {
+      "id": "gallery-4",
+      "description": "A large crowd at a party rally.",
+      "imageUrl": "https://images.unsplash.com/photo-1713311355069-0b8abc670009?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwb2xpdGljYWwlMjByYWxseXxlbnwwfHx8fDE3NjE5ODA2OTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "political rally"
+    },
+    {
+      "id": "gallery-5",
+      "description": "President visiting a newly built school.",
+      "imageUrl": "https://images.unsplash.com/photo-1660351174962-e2a1fbb9af09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzY2hvb2wlMjB2aXNpdHxlbnwwfHx8fDE3NjE5MjkzNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "school visit"
+    },
+    {
+      "id": "gallery-6",
+      "description": "President shaking hands with a farmer.",
+      "imageUrl": "https://images.unsplash.com/photo-1553073520-80b5ad5ec870?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29tbXVuaXR5JTIwZW5nYWdlbWVudHxlbnwwfHx8fDE3NjE5MTY1MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "community engagement"
+    },
+    {
+      "id": "gallery-7",
+      "description": "A new infrastructure project like a bridge or dam.",
+      "imageUrl": "https://images.unsplash.com/photo-1708357997379-e55c1636e0d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxpbmZyYXN0cnVjdHVyZSUyMHByb2plY3R8ZW58MHx8fHwxNzYxOTkxNTQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "infrastructure project"
+    },
+    {
+      "id": "gallery-8",
+      "description": "Vintage photo of early party members.",
+      "imageUrl": "https://images.unsplash.com/photo-1576666735169-62fbfbf35717?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aGlzdG9yaWNhbCUyMGdyb3VwfGVufDB8fHx8MTc2MTk5MTU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "historical group"
+    },
+    {
+      "id": "gallery-9",
+      "description": "President waving from a car during a parade.",
+      "imageUrl": "https://images.unsplash.com/photo-1609051336245-eac70fc7bac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxvZmZpY2lhbCUyMHBhcmFkZXxlbnwwfHx8fDE3NjE5OTE1NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "official parade"
+    },
+    {
+      "id": "history-origins",
+      "description": "An archival document with an official seal.",
+      "imageUrl": "https://images.unsplash.com/photo-1760822600750-0bc72f1fad9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aGlzdG9yaWNhbCUyMGRvY3VtZW50fGVufDB8fHx8MTc2MTkyODg1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "historical document"
+    },
+    {
+      "id": "key-figure-1",
+      "description": "Portrait of a historical political figure.",
+      "imageUrl": "https://images.unsplash.com/photo-1580893472468-01373fe4c97e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3J0cmFpdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjE5NDgzMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portrait person"
+    },
+    {
+      "id": "key-figure-2",
+      "description": "Portrait of another historical political figure.",
+      "imageUrl": "https://images.unsplash.com/photo-1552699611-e2c208d5d9cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3J0cmFpdCUyMHdvbWFufGVufDB8fHx8MTc2MTk3NzA3NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portrait woman"
+    },
+    {
+      "id": "key-figure-3",
+      "description": "Portrait of a third historical political figure.",
+      "imageUrl": "https://images.unsplash.com/photo-1656338997878-279d71d48f6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3J0cmFpdCUyMG1hbnxlbnwwfHx8fDE3NjE5ODI5OTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portrait man"
+    }
+  ]
 }
