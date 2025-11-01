@@ -196,6 +196,12 @@ pathname: '/**',
         hostname: 'gdb.voanews.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'news.pindula.co.zw',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
