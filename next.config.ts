@@ -40,6 +40,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.newziana.co.zw' },
       { protocol: 'https', hostname: '**.insiderzim.com' },
       { protocol: 'https', hostname: '**.startupbiz.co.zw' },
+      { protocol: 'https', hostname: 'masvingomirror.com' },
 
       // Other Specific Domains
       { protocol: 'https', hostname: 'omo-oss-image.thefastimg.com' },
