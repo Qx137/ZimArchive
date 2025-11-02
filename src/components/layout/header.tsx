@@ -33,10 +33,10 @@ export function Header() {
   );
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-primary shadow-lg">
+    <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-[hsl(var(--primary))] via-[hsl(var(--accent))] via-[hsl(var(--destructive))] to-[hsl(var(--secondary))] shadow-lg">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <ZimbabweBirdIcon className="h-10 w-10 text-accent" />
+          <ZimbabweBirdIcon className="h-10 w-10 text-background/80" />
           <span className="text-2xl font-headline font-bold text-primary-foreground">
             ZimArchive
           </span>
@@ -51,12 +51,12 @@ export function Header() {
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary/80 hover:text-accent">
+              <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-black/20 hover:text-accent">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[40vw] bg-primary text-primary-foreground border-l-primary/50">
+            <SheetContent side="right" className="w-[40vw] bg-gradient-to-b from-[hsl(var(--primary))] to-[hsl(var(--secondary))] text-primary-foreground border-l-black/50">
               <nav className="flex flex-col space-y-6 pt-10">
                 {navLinks.map((link) => (
                    <Link href={link.href} key={`mobile-${link.href}`}>
