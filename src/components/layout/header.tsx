@@ -12,7 +12,6 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/timeline", label: "Timeline" },
   { href: "/achievements", label: "Achievements" },
-  { href: "/history", label: "History" },
   { href: "/gallery", label: "Gallery" },
 ];
 

@@ -26,13 +26,6 @@ const featureCardsData = [
     imageId: "hero-achievements"
   },
   {
-    title: "Party History",
-    description: "Learn about the origins, key figures, and historical context of the party.",
-    href: "/history",
-    icon: <ZimbabweBirdIcon className="w-8 h-8 text-primary" />,
-    imageId: "hero-history"
-  },
-  {
     title: "Image Gallery",
     description: "A visual journey through significant moments and events.",
     href: "/gallery",
