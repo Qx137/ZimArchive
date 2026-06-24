@@ -1,9 +1,9 @@
 'use server';
 
-import {ai, genkit} from 'genkit';
+import {genkit} from 'genkit';
 import {googleAI} from '@genkit-ai/google-genai';
 
-genkit({
+const ai = genkit({
   plugins: [googleAI()],
 });
 
