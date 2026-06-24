@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { 
   Award, 
@@ -20,15 +20,36 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { heroesData, Hero } from "@/data/heroes";
 import matemadandaImage from "@/img/matemadanda.png";
+import QRCode from "react-qr-code";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function NationalHeroesPage() {
   const [selectedHero, setSelectedHero] = useState<Hero>(heroesData[0]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [profileUrl, setProfileUrl] = useState("");
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
   const filteredHeroes = heroesData.filter(hero => 
     hero.fullName.toLowerCase().includes(searchQuery.toLowerCase()) ||
     hero.summary.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  useEffect(() => {
+    const heroParam = searchParams?.get?.("hero");
+    if (heroParam) {
+      const found = heroesData.find(h => h.id === heroParam);
+      if (found) setSelectedHero(found);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
+
+  useEffect(() => {
+    const base = process.env.NEXT_PUBLIC_SITE_URL || (typeof window !== "undefined" ? window.location.origin : "https://zimarchive.netlify.app");
+    if (selectedHero) {
+      setProfileUrl(`${base.replace(/\/$/, "")}/national-heroes/${selectedHero.id}`);
+    }
+  }, [selectedHero]);
 
   return (
     <div className="bg-background min-h-screen">
@@ -74,7 +95,10 @@ export default function NationalHeroesPage() {
                     filteredHeroes.map((hero) => (
                       <button
                         key={hero.id}
-                        onClick={() => setSelectedHero(hero)}
+                        onClick={() => {
+                          setSelectedHero(hero);
+                          router.push(`/national-heroes/${hero.id}`);
+                        }}
                         className={`w-full text-left p-3 rounded-lg border transition-all flex items-center justify-between group ${
                           selectedHero.id === hero.id
                             ? "bg-primary/10 border-primary text-primary"
@@ -170,6 +194,22 @@ export default function NationalHeroesPage() {
                             <Shield className="h-4 w-4 text-primary shrink-0" />
                             <span>Military: ZANLA (1973)</span>
                           </div>
+                        </div>
+                      </div>
+
+                      {/* QR Code Column */}
+                      <div className="w-full md:w-40 flex-shrink-0 flex items-start md:items-center">
+                        <div className="p-3 bg-muted rounded-lg border border-primary/10 shadow-sm w-full text-center">
+                          {profileUrl ? (
+                            <>
+                              <div className="mx-auto w-32 h-32">
+                                <QRCode value={profileUrl} size={128} />
+                              </div>
+                              <p className="text-xs text-muted-foreground mt-2 break-words">Scan to open profile</p>
+                            </>
+                          ) : (
+                            <p className="text-sm text-muted-foreground">Preparing QR…</p>
+                          )}
                         </div>
                       </div>
                     </div>
