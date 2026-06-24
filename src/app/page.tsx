@@ -2,13 +2,14 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, GalleryHorizontal, Landmark, Presentation } from "lucide-react";
+import { ArrowRight, GalleryHorizontal, Landmark, Presentation, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ZimbabweBirdIcon } from "@/components/icons/zimbabwe-bird";
 import { useImages } from "@/hooks/use-images";
 import heroMainImage from "@/img/hero-main.jpg";
 import trabyImage from "@/img/traby.jpeg";
+import matemadandaImage from "@/img/matemadanda.png";
 
 const featureCardsData = [
   {
@@ -31,6 +32,13 @@ const featureCardsData = [
     href: "/gallery",
     icon: <GalleryHorizontal className="w-8 h-8 text-primary" />,
     imageId: "hero-gallery"
+  },
+  {
+    title: "National Heroes",
+    description: "Profiles of the heroes who shaped the nation through service, sacrifice, and leadership.",
+    href: "/national-heroes",
+    icon: <ShieldCheck className="w-8 h-8 text-primary" />,
+    imageId: "hero-national-heroes"
   },
 ];
 
@@ -79,6 +87,8 @@ export default function Home() {
             {featureCardsData.map((feature) => {
               const featureImage = feature.imageId === 'hero-achievements' 
                 ? { imageUrl: trabyImage, altText: "Modern infrastructure project.", imageHint: "modern infrastructure" }
+                : feature.imageId === 'hero-national-heroes'
+                ? { imageUrl: matemadandaImage, altText: "Portrait of Cde Victor Matemadanda.", imageHint: "national hero portrait" }
                 : images?.find(img => img.id === feature.imageId);
               
               return (

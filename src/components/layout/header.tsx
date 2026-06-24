@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/timeline", label: "Timeline" },
   { href: "/achievements", label: "Achievements" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/national-heroes", label: "National Heroes" },
 ];
 
 export function Header() {
