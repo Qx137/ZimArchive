@@ -3,6 +3,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useImages } from "@/hooks/use-images";
+import type { Image as GalleryImage } from "@/types/image";
 import Image from "next/image";
 
 const gallerySections = [
@@ -54,7 +55,9 @@ export default function GalleryPage() {
 
         <div className="space-y-16">
           {gallerySections.map((section) => {
-            const sectionImages = section.imageIds.map(id => images?.find(img => img.id === id)).filter(Boolean);
+            const sectionImages = section.imageIds
+              .map(id => images?.find(img => img.id === id))
+              .filter((image): image is GalleryImage => Boolean(image));
 
             return (
               <section key={section.id}>
