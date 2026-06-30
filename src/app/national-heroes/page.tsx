@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Image from "next/image";
 import { 
   Award, 
@@ -22,8 +22,9 @@ import { heroesData, Hero } from "@/data/heroes";
 import matemadandaImage from "@/img/matemadanda.png";
 import QRCode from "react-qr-code";
 import { useRouter, useSearchParams } from "next/navigation";
+import { getSiteUrl } from "@/lib/site-url";
 
-export default function NationalHeroesPage() {
+function NationalHeroesContent() {
   const [selectedHero, setSelectedHero] = useState<Hero>(heroesData[0]);
   const [searchQuery, setSearchQuery] = useState("");
   const [profileUrl, setProfileUrl] = useState("");
@@ -45,7 +46,7 @@ export default function NationalHeroesPage() {
   }, [searchParams]);
 
   useEffect(() => {
-    const base = process.env.NEXT_PUBLIC_SITE_URL || (typeof window !== "undefined" ? window.location.origin : "https://zimarchive.netlify.app");
+    const base = getSiteUrl(typeof window !== "undefined" ? window.location.origin : undefined);
     if (selectedHero) {
       setProfileUrl(`${base.replace(/\/$/, "")}/national-heroes/${selectedHero.id}`);
     }
@@ -363,5 +364,17 @@ export default function NationalHeroesPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function NationalHeroesPage() {
+  return (
+    <Suspense fallback={
+      <div className="bg-background min-h-screen flex items-center justify-center">
+        <p className="text-muted-foreground">Loading heroes…</p>
+      </div>
+    }>
+      <NationalHeroesContent />
+    </Suspense>
   );
 }

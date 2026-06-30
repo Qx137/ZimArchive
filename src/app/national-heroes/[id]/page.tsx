@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import QRCode from "react-qr-code";
 import { heroesData } from "@/data/heroes";
 import matemadandaImage from "@/img/matemadanda.png";
+import { getSiteUrl } from "@/lib/site-url";
 
 interface Props {
   params: { id: string };
@@ -29,7 +30,7 @@ export default function Page({ params }: Props) {
     );
   }
 
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://zimarchive.netlify.app";
+  const base = getSiteUrl();
   const canonical = `${base.replace(/\/$/, "")}/national-heroes/${hero.id}`;
 
   return (
