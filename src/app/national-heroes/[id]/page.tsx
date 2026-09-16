@@ -1,7 +1,5 @@
 import Image from "next/image";
 import {
-  Calendar,
-  GraduationCap,
   MapPin,
   Briefcase,
   Shield,
@@ -15,11 +13,11 @@ import matemadandaImage from "@/img/matemadanda.png";
 import { getSiteUrl } from "@/lib/site-url";
 
 interface Props {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
-export default function Page({ params }: Props) {
-  const { id } = params;
+export default async function Page({ params }: Props) {
+  const { id } = await params;
   const hero = heroesData.find((h) => h.id === id);
   if (!hero) {
     return (
@@ -55,7 +53,7 @@ export default function Page({ params }: Props) {
                   <p className="text-sm text-muted-foreground mt-1">{hero.birthDate} – {hero.deathDate || 'Present'}</p>
                 </div>
 
-                <p className="font-body text-base text-muted-foreground leading-relaxed italic border-l-4 border-accent pl-4 py-1">"{hero.summary}"</p>
+                <p className="font-body text-base text-muted-foreground leading-relaxed italic border-l-4 border-accent pl-4 py-1">&quot;{hero.summary}&quot;</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2 text-sm text-muted-foreground">
                   <div className="flex items-center space-x-2"><MapPin className="h-4 w-4 text-primary" /><span>Origin: {hero.placeOfOrigin}</span></div>

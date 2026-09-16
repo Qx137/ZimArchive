@@ -49,7 +49,7 @@ export default function GalleryPage() {
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-headline text-primary mb-4">Image Gallery</h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A visual chronicle of the President's activities, party events, and significant national moments.
+            A visual chronicle of the President&apos;s activities, party events, and significant national moments.
           </p>
         </div>
 

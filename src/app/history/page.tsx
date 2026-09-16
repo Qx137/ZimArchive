@@ -3,7 +3,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useImages } from "@/hooks/use-images";
-import { BookOpen, Users, Milestone, ShieldCheck, Pyramid, Scale } from "lucide-react";
+import { BookOpen, Users, Milestone, Pyramid, Scale } from "lucide-react";
 import Image from "next/image";
 
 const origins = {
@@ -43,7 +43,7 @@ const challenges = {
 
 
 export default function HistoryPage() {
-    const { images, isLoading } = useImages();
+    const { images } = useImages();
     const originsImage = images?.find(img => img.id === origins.imageId);
     const ideologyImage = images?.find(img => img.id === ideology.imageId);
     const challengesImage = images?.find(img => img.id === challenges.imageId);
@@ -91,7 +91,7 @@ export default function HistoryPage() {
                         <Users className="w-12 h-12 text-accent mx-auto mb-4" />
                         <h2 className="text-3xl md:text-4xl font-headline text-primary">Key Figures</h2>
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-2">
-                            The architects and pioneers who shaped the party's journey.
+                            The architects and pioneers who shaped the party&apos;s journey.
                         </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

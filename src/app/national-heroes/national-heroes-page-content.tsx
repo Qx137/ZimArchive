@@ -43,7 +43,6 @@ export default function NationalHeroesPageContent() {
       const found = heroesData.find((h) => h.id === heroParam);
       if (found) setSelectedHero(found);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
   useEffect(() => {
@@ -63,7 +62,7 @@ export default function NationalHeroesPageContent() {
             National Heroes of Zimbabwe
           </h1>
           <p className="text-md md:text-xl font-body max-w-2xl mx-auto text-primary-foreground/90 leading-relaxed">
-            Honoring the brave patriots, diplomats, and leaders who fought, served, and dedicated their lives to securing Zimbabwe's sovereignty and shaping its future.
+            Honoring the brave patriots, diplomats, and leaders who fought, served, and dedicated their lives to securing Zimbabwe&apos;s sovereignty and shaping its future.
           </p>
         </div>
       </section>
@@ -182,7 +181,7 @@ export default function NationalHeroesPageContent() {
                         </div>
 
                         <p className="font-body text-base text-muted-foreground leading-relaxed italic border-l-4 border-accent pl-4 py-1">
-                          "{selectedHero.summary}"
+                          &quot;{selectedHero.summary}&quot;
                         </p>
 
                         {/* Quick details tags */}

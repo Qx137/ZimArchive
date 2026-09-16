@@ -2,8 +2,10 @@
  * @fileoverview Firestore Security Rules for ZimArchive.
  *
  * Core Philosophy:
- * This ruleset enforces public read access for all data.
- * Write access is completely open, meaning anyone can create, update, and delete documents.
+ * This ruleset enforces public read access for all data. Writes are closed by
+ * default because the app has no authentication flow yet — every page only
+ * reads from Firestore. If an admin/editing flow is added later, replace the
+ * `if false` below with a check against an authenticated admin user.
  *
  * Data Structure:
  * The database consists of top-level collections for `presidents`, `political_parties`,
@@ -11,82 +13,64 @@
  *
  * Key Security Decisions:
  * - Public Read Access: All `get` and `list` operations are allowed for all collections.
- * - Unrestricted Write Access: All `create`, `update`, and `delete` operations are allowed for all collections.
+ * - No Public Write Access: All `create`, `update`, and `delete` operations are denied.
  */
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
     /**
-     * @description Allows public read and write access to presidents.
+     * @description Allows public read access to presidents. Writes are closed.
      * @path /presidents/{presidentId}
-     * @allow (get, list) - Any user can read president data.
-     * @allow (create, update, delete) - Any user can write president data.
-     * @principle Allows public access to president data.
      */
     match /presidents/{presidentId} {
       allow get, list: if true;
-      allow create, update, delete: if true;
+      allow create, update, delete: if false;
     }
 
     /**
-     * @description Allows public read and write access to political parties.
+     * @description Allows public read access to political parties. Writes are closed.
      * @path /political_parties/{politicalPartyId}
-     * @allow (get, list) - Any user can read political party data.
-     * @allow (create, update, delete) - Any user can write political party data.
-     * @principle Allows public access to political party data.
      */
     match /political_parties/{politicalPartyId} {
       allow get, list: if true;
-      allow create, update, delete: if true;
+      allow create, update, delete: if false;
     }
 
     /**
-     * @description Allows public read and write access to achievements.
+     * @description Allows public read access to achievements. Writes are closed.
      * @path /achievements/{achievementId}
-     * @allow (get, list) - Any user can read achievement data.
-     * @allow (create, update, delete) - Any user can write achievement data.
-     * @principle Allows public access to achievement data.
      */
     match /achievements/{achievementId} {
       allow get, list: if true;
-      allow create, update, delete: if true;
+      allow create, update, delete: if false;
     }
 
     /**
-     * @description Allows public read and write access to categories.
+     * @description Allows public read access to categories. Writes are closed.
      * @path /categories/{categoryId}
-     * @allow (get, list) - Any user can read category data.
-     * @allow (create, update, delete) - Any user can write category data.
-     * @principle Allows public access to category data.
      */
     match /categories/{categoryId} {
       allow get, list: if true;
-      allow create, update, delete: if true;
+      allow create, update, delete: if false;
     }
 
     /**
-     * @description Allows public read and write access to timeline events.
+     * @description Allows public read access to timeline events. Writes are closed.
      * @path /timeline_events/{timelineEventId}
-     * @allow (get, list) - Any user can read timeline event data.
-     * @allow (create, update, delete) - Any user can write timeline event data.
-     * @principle Allows public access to timeline event data.
      */
     match /timeline_events/{timelineEventId} {
       allow get, list: if true;
-      allow create, update, delete: if true;
+      allow create, update, delete: if false;
     }
 
     /**
-     * @description Allows public read and write access to images.
+     * @description Allows public read access to images. Writes are closed.
      * @path /images/{imageId}
-     * @allow (get, list) - Any user can read image data.
-     * @allow (create, update, delete) - Any user can write image data.
-     * @principle Allows public access to image data.
      */
     match /images/{imageId} {
       allow get, list: if true;
-      allow create, update, delete: if true;
+      allow create, update, delete: if false;
     }
   }
 }

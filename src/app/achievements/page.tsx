@@ -34,7 +34,7 @@ export default function AchievementsPage() {
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-headline text-primary mb-4">Key Achievements</h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A showcase of the President's and his party's major achievements and initiatives, categorized by sector.
+            A showcase of the President&apos;s and his party&apos;s major achievements and initiatives, categorized by sector.
           </p>
         </div>
 
