@@ -1,8 +1,13 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useEffect, useRef } from "react";
+import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { SpotlightCard } from "@/components/ui/spotlight-card";
+import { PageHeader } from "@/components/ui/page-header";
+import { Reveal } from "@/components/ui/reveal";
 import { cn } from "@/lib/utils";
 import { useImages } from "@/hooks/use-images";
+import { useInView } from "@/hooks/use-in-view";
 import Image from "next/image";
 
 const timelineData = [
@@ -56,70 +61,136 @@ const timelineData = [
   },
 ];
 
+function TimelineNode({ index }: { index: number }) {
+  const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.6, rootMargin: "0px 0px -20% 0px" });
+
+  return (
+    <div ref={ref} className="relative flex h-10 w-10 items-center justify-center md:h-12 md:w-12">
+      {inView && (
+        <span
+          aria-hidden
+          className="absolute inset-0 rounded-full bg-accent/60 motion-safe:animate-[ring-out_1.3s_ease-out_1]"
+        />
+      )}
+      <span
+        className={cn(
+          "relative z-10 flex h-full w-full items-center justify-center rounded-full border font-ui text-sm font-bold tabular-nums transition-all duration-700 md:text-lg",
+          inView
+            ? "scale-100 border-white/60 bg-accent text-accent-foreground shadow-xl shadow-accent/40"
+            : "glass-strong scale-90 text-muted-foreground"
+        )}
+      >
+        {index + 1}
+      </span>
+    </div>
+  );
+}
 
 export default function TimelinePage() {
-    const { images } = useImages();
+  const { images } = useImages();
+  const railRef = useRef<HTMLDivElement>(null);
 
-    return (
-        <div className="bg-background min-h-screen">
-            <div className="container mx-auto px-4 py-16">
-                <div className="text-center mb-16">
-                    <h1 className="text-5xl md:text-6xl font-headline text-primary mb-4">Presidential Timeline</h1>
-                    <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                        A chronological journey through the life, career, and key moments of the President of Zimbabwe.
-                    </p>
-                </div>
+  // Fill the centre line as the reader scrolls through the timeline.
+  useEffect(() => {
+    const el = railRef.current;
+    if (!el) return;
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const rect = el.getBoundingClientRect();
+      const reached = window.innerHeight * 0.6 - rect.top;
+      const pct = Math.min(Math.max(reached / rect.height, 0), 1) * 100;
+      el.style.setProperty("--tl-progress", `${pct}%`);
+    };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (frame) cancelAnimationFrame(frame);
+    };
+  }, []);
 
-                <div className="relative wrap overflow-hidden p-4 md:p-10 h-full">
-                    <div className="absolute border-opacity-20 border-primary/40 h-full border-2 left-5 md:left-1/2 md:-translate-x-1/2 rounded-full"></div>
-                    
-                    {timelineData.map((item, index) => {
-                        const timelineImage = images?.find(img => img.id === item.imageId);
-                        const isLeft = index % 2 !== 0;
+  return (
+    <div className="min-h-screen">
+      <div className="container mx-auto px-4 py-16">
+        <PageHeader
+          eyebrow="1942 – Present"
+          title="Presidential Timeline"
+          description="A chronological journey through the life, career, and key moments of the President of Zimbabwe."
+        />
 
-                        return (
-                            <div key={item.year} className={cn(
-                                "mb-8 flex justify-between items-center w-full",
-                                isLeft ? "flex-row-reverse left-timeline" : "right-timeline"
-                            )}>
-                                <div className="order-1 w-5/12"></div>
-                                <div className={cn("z-20 flex items-center order-1 bg-accent shadow-xl w-8 h-8 rounded-full",
-                                     "md:w-12 md:h-12"
-                                )}>
-                                    <span className="mx-auto font-semibold text-sm md:text-lg text-white">{index + 1}</span>
-                                </div>
-                                <div className={cn(
-                                    "order-1 rounded-lg w-full md:w-5/12",
-                                )}>
-                                    <Card className="shadow-lg hover:shadow-2xl transition-shadow duration-300 border-primary/20 bg-card">
-                                      {timelineImage && (
-                                          <div className="relative w-full h-48">
-                                              <Image
-                                                  src={timelineImage.imageUrl}
-                                                  alt={timelineImage.altText}
-                                                  fill
-                                                  className="object-cover rounded-t-lg"
-                                                  data-ai-hint={timelineImage.imageHint}
-                                              />
-                                          </div>
-                                      )}
-                                      <CardHeader>
-                                          <CardTitle className="mb-2 text-primary font-headline text-xl md:text-2xl">
-                                              {item.year}: {item.title}
-                                          </CardTitle>
-                                      </CardHeader>
-                                      <CardContent>
-                                          <p className="text-muted-foreground font-body leading-relaxed">
-                                              {item.description}
-                                          </p>
-                                      </CardContent>
-                                    </Card>
-                                </div>
-                            </div>
-                        )
-                    })}
-                </div>
-            </div>
+        <div ref={railRef} className="relative mx-auto max-w-6xl py-4 md:py-10" style={{ ["--tl-progress" as string]: "0%" }}>
+          {/* Rail: faint track + a gradient fill that grows with scroll */}
+          <div aria-hidden className="absolute bottom-0 left-5 top-0 w-0.5 -translate-x-1/2 rounded-full bg-primary/15 md:left-1/2">
+            <div
+              className="w-full rounded-full bg-gradient-to-b from-primary via-accent to-destructive"
+              style={{ height: "var(--tl-progress)" }}
+            />
+          </div>
+
+          <ol className="space-y-10 md:space-y-14">
+            {timelineData.map((item, index) => {
+              const timelineImage = images?.find((img) => img.id === item.imageId);
+              const isLeft = index % 2 !== 0;
+
+              return (
+                <li
+                  key={item.year}
+                  className="relative grid grid-cols-[2.5rem_1fr] items-start gap-x-4 md:grid-cols-[1fr_3rem_1fr] md:gap-x-8"
+                >
+                  <div className="z-10 col-start-1 row-start-1 md:col-start-2">
+                    <TimelineNode index={index} />
+                  </div>
+
+                  <Reveal
+                    direction={isLeft ? "left" : "right"}
+                    delay={80}
+                    className={cn(
+                      "col-start-2 row-start-1 min-w-0",
+                      isLeft ? "md:col-start-1" : "md:col-start-3"
+                    )}
+                  >
+                    <SpotlightCard className="group overflow-hidden border-primary/20">
+                      {timelineImage ? (
+                        <div className="relative h-48 w-full overflow-hidden">
+                          <Image
+                            src={timelineImage.imageUrl}
+                            alt={timelineImage.altText}
+                            fill
+                            sizes="(max-width: 768px) 90vw, 45vw"
+                            className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                            data-ai-hint={timelineImage.imageHint}
+                          />
+                          <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+                          <span className="glass-on-color absolute bottom-3 left-3 rounded-full px-3 py-1 font-ui text-xs font-semibold tracking-wider text-white">
+                            {item.year}
+                          </span>
+                        </div>
+                      ) : (
+                        <div className="h-48 w-full animate-pulse bg-muted/60" aria-hidden />
+                      )}
+                      <CardHeader className="pb-2">
+                        <CardTitle className="font-headline text-xl text-primary md:text-2xl">
+                          <span className="mr-2 text-accent">{item.year}</span>
+                          {item.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="font-body leading-relaxed text-muted-foreground">{item.description}</p>
+                      </CardContent>
+                    </SpotlightCard>
+                  </Reveal>
+                </li>
+              );
+            })}
+          </ol>
         </div>
-    );
+      </div>
+    </div>
+  );
 }

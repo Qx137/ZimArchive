@@ -78,7 +78,279 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-padding-top: 6rem;
+    font-optical-sizing: auto;
+  }
+  /* Justified bios look ragged without hyphenation; lang="en" is set on <html>. */
+  .text-justify {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
   body {
     @apply bg-background text-foreground;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern", "liga", "calt";
+    /* Off-screen reveal offsets must never create a sideways scrollbar. `clip` (unlike `hidden`) keeps sticky headers working. */
+    overflow-x: clip;
+  }
+  ::selection {
+    background: hsl(var(--accent) / 0.45);
+    color: hsl(var(--foreground));
+  }
+  :focus-visible {
+    outline-color: hsl(var(--ring));
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Glass + motion system. Every colour below comes from the existing   *
+ * theme tokens (--primary, --accent, --destructive, --card, ...).     *
+ * ------------------------------------------------------------------ */
+@layer components {
+  /* Display serif sits a touch tighter at large sizes; UI sans keeps default spacing. */
+  .font-headline {
+    letter-spacing: -0.012em;
+  }
+
+  /* Soft drifting colour fields that sit behind the page so glass has something to blur. */
+  .ambient-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .ambient-blob {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    will-change: transform;
+    animation: blob-drift 32s ease-in-out infinite alternate;
+  }
+  .ambient-blob-1 {
+    width: 38rem;
+    height: 38rem;
+    top: -12rem;
+    left: -10rem;
+    background: hsl(var(--primary) / 0.26);
+  }
+  .ambient-blob-2 {
+    width: 34rem;
+    height: 34rem;
+    top: 32%;
+    right: -12rem;
+    background: hsl(var(--accent) / 0.24);
+    animation-delay: -11s;
+  }
+  .ambient-blob-3 {
+    width: 32rem;
+    height: 32rem;
+    bottom: -10rem;
+    left: 28%;
+    background: hsl(var(--destructive) / 0.14);
+    animation-delay: -21s;
+  }
+
+  .glass {
+    background: hsl(var(--card) / 0.62);
+    -webkit-backdrop-filter: blur(18px) saturate(1.5);
+    backdrop-filter: blur(18px) saturate(1.5);
+    border: 1px solid hsl(0 0% 100% / 0.6);
+    box-shadow:
+      0 12px 32px -14px hsl(var(--primary) / 0.28),
+      inset 0 1px 0 hsl(0 0% 100% / 0.7);
+  }
+  .glass-strong {
+    background: hsl(var(--card) / 0.8);
+    -webkit-backdrop-filter: blur(26px) saturate(1.6);
+    backdrop-filter: blur(26px) saturate(1.6);
+    border: 1px solid hsl(0 0% 100% / 0.7);
+    box-shadow:
+      0 18px 40px -16px hsl(var(--primary) / 0.34),
+      inset 0 1px 0 hsl(0 0% 100% / 0.8);
+  }
+  /* Frosted layer for use on top of the green/yellow/red gradient bars. */
+  .glass-on-color {
+    background: hsl(0 0% 100% / 0.12);
+    -webkit-backdrop-filter: blur(14px) saturate(1.4);
+    backdrop-filter: blur(14px) saturate(1.4);
+    border: 1px solid hsl(0 0% 100% / 0.28);
+    box-shadow: inset 0 1px 0 hsl(0 0% 100% / 0.35);
+  }
+  .dark .glass {
+    border-color: hsl(0 0% 100% / 0.1);
+    box-shadow:
+      0 12px 32px -14px hsl(0 0% 0% / 0.6),
+      inset 0 1px 0 hsl(0 0% 100% / 0.08);
+  }
+  .dark .glass-strong {
+    border-color: hsl(0 0% 100% / 0.14);
+    box-shadow:
+      0 18px 40px -16px hsl(0 0% 0% / 0.7),
+      inset 0 1px 0 hsl(0 0% 100% / 0.1);
+  }
+
+  /* Lift on hover. Add to anything that is already .glass. */
+  .glass-hover {
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.35s ease,
+      border-color 0.35s ease;
+  }
+  .glass-hover:hover {
+    transform: translateY(-4px);
+    border-color: hsl(var(--accent) / 0.55);
+    box-shadow:
+      0 22px 44px -16px hsl(var(--primary) / 0.38),
+      inset 0 1px 0 hsl(0 0% 100% / 0.8);
+  }
+
+  /* Cursor-following highlight (position set from JS via --mx / --my). */
+  .spotlight {
+    position: relative;
+    isolation: isolate;
+  }
+  .spotlight::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    background: radial-gradient(
+      420px circle at var(--mx, 50%) var(--my, 50%),
+      hsl(var(--accent) / 0.2),
+      transparent 65%
+    );
+  }
+  .spotlight:hover::before {
+    opacity: 1;
+  }
+  .spotlight > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Scroll reveal (driven by <Reveal />). */
+  .reveal {
+    opacity: 0;
+    transform: translate3d(var(--rx, 0), var(--ry, 28px), 0) scale(var(--rs, 0.985));
+    transition:
+      opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Underline that grows from the left on hover / when active. */
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.2rem;
+    height: 2px;
+    border-radius: 9999px;
+    background: hsl(var(--accent));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .link-underline:hover::after,
+  .link-underline[data-active="true"]::after {
+    transform: scaleX(1);
+  }
+}
+
+@layer utilities {
+  .text-gradient-flag {
+    background-image: linear-gradient(
+      90deg,
+      hsl(var(--primary)),
+      hsl(var(--accent)),
+      hsl(var(--destructive))
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--primary) / 0.35) transparent;
+  }
+}
+
+@keyframes blob-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(5%, 8%, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(-4%, 3%, 0) scale(0.96);
+  }
+}
+
+@keyframes ring-out {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+}
+
+@keyframes sheen {
+  0% {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(260%) skewX(-18deg);
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.page-in {
+  animation: page-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .ambient-blob,
+  .page-in {
+    animation: none;
+  }
+  .glass-hover:hover {
+    transform: none;
+  }
+  html {
+    scroll-behavior: auto;
   }
 }

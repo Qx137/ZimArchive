@@ -1,7 +1,13 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+"use client";
+
+import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { DollarSign, GraduationCap, HeartPulse } from "lucide-react";
+import { ExpandableText } from "@/components/ui/expandable-text";
+import { PageHeader } from "@/components/ui/page-header";
+import { Reveal } from "@/components/ui/reveal";
+import { DollarSign, GraduationCap, HeartPulse, type LucideIcon } from "lucide-react";
 
 const achievements = {
   economy: [
@@ -27,73 +33,63 @@ const achievements = {
   ],
 };
 
+const categories: { value: keyof typeof achievements; label: string; icon: LucideIcon }[] = [
+  { value: "economy", label: "Economy", icon: DollarSign },
+  { value: "education", label: "Education", icon: GraduationCap },
+  { value: "health", label: "Health", icon: HeartPulse },
+];
+
 export default function AchievementsPage() {
   return (
-    <div className="bg-background min-h-screen">
+    <div className="min-h-screen">
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-headline text-primary mb-4">Key Achievements</h1>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A showcase of the President&apos;s and his party&apos;s major achievements and initiatives, categorized by sector.
-          </p>
-        </div>
+        <PageHeader
+          eyebrow="By sector"
+          title="Key Achievements"
+          description="A showcase of the President's and his party's major achievements and initiatives, categorized by sector."
+        />
 
         <Tabs defaultValue="economy" className="w-full">
-          <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 bg-primary/10 p-2 h-auto">
-            <TabsTrigger value="economy" className="py-2 text-md md:text-lg data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=active]:shadow-md">
-              <DollarSign className="mr-2 h-5 w-5"/> Economy
-            </TabsTrigger>
-            <TabsTrigger value="education" className="py-2 text-md md:text-lg data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=active]:shadow-md">
-              <GraduationCap className="mr-2 h-5 w-5"/> Education
-            </TabsTrigger>
-            <TabsTrigger value="health" className="py-2 text-md md:text-lg data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=active]:shadow-md">
-              <HeartPulse className="mr-2 h-5 w-5"/> Health
-            </TabsTrigger>
-          </TabsList>
-          
-          <TabsContent value="economy" className="mt-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {achievements.economy.map((item) => (
-                <Card key={item.title} className="shadow-lg border-primary/20 hover:border-primary/40 transition-all">
-                  <CardHeader>
-                    <CardTitle className="font-headline text-2xl text-primary">{item.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="font-body text-base text-muted-foreground">{item.description}</CardDescription>
-                  </CardContent>
-                </Card>
+          <Reveal delay={100}>
+            <TabsList className="grid h-auto w-full grid-cols-1 gap-1 p-1.5 md:grid-cols-3">
+              {categories.map(({ value, label, icon: Icon }) => (
+                <TabsTrigger
+                  key={value}
+                  value={value}
+                  className="text-md py-2.5 md:text-lg data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=active]:shadow-lg data-[state=active]:shadow-accent/30"
+                >
+                  <Icon className="mr-2 h-5 w-5" /> {label}
+                  <span className="ml-2 rounded-full bg-black/10 px-2 py-0.5 text-xs font-semibold">
+                    {achievements[value].length}
+                  </span>
+                </TabsTrigger>
               ))}
-            </div>
-          </TabsContent>
-          <TabsContent value="education" className="mt-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {achievements.education.map((item) => (
-                <Card key={item.title} className="shadow-lg border-primary/20 hover:border-primary/40 transition-all">
-                  <CardHeader>
-                    <CardTitle className="font-headline text-2xl text-primary">{item.title}</CardTitle>
+            </TabsList>
+          </Reveal>
 
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="font-body text-base text-muted-foreground">{item.description}</CardDescription>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-          <TabsContent value="health" className="mt-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {achievements.health.map((item) => (
-                <Card key={item.title} className="shadow-lg border-primary/20 hover:border-primary/40 transition-all">
-                  <CardHeader>
-                    <CardTitle className="font-headline text-2xl text-primary">{item.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="font-body text-base text-muted-foreground">{item.description}</CardDescription>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
+          {categories.map(({ value }) => (
+            <TabsContent key={value} value={value} className="mt-8">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+                {achievements[value].map((item, index) => (
+                  <Reveal key={item.title} delay={Math.min(index, 4) * 80}>
+                    <SpotlightCard className="h-full border-primary/20">
+                      <CardHeader className="flex-row items-start gap-4 space-y-0">
+                        <span className="glass-strong flex h-10 w-10 shrink-0 items-center justify-center rounded-xl font-ui text-sm font-bold text-accent-foreground bg-accent/80">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <CardTitle className="font-headline text-2xl leading-tight text-primary">
+                          {item.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <ExpandableText text={item.description} />
+                      </CardContent>
+                    </SpotlightCard>
+                  </Reveal>
+                ))}
+              </div>
+            </TabsContent>
+          ))}
         </Tabs>
       </div>
     </div>

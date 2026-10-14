@@ -1,7 +1,10 @@
 
 "use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { SpotlightCard } from "@/components/ui/spotlight-card";
+import { PageHeader } from "@/components/ui/page-header";
+import { Reveal } from "@/components/ui/reveal";
 import { useImages } from "@/hooks/use-images";
 import { BookOpen, Users, Milestone, Pyramid, Scale } from "lucide-react";
 import Image from "next/image";
@@ -42,173 +45,171 @@ const challenges = {
 };
 
 
+function FeatureCard({
+    icon,
+    title,
+    description,
+    image,
+    flip = false,
+}: {
+    icon: React.ReactNode;
+    title: string;
+    description: string;
+    image?: { imageUrl: string; altText: string; imageHint?: string };
+    flip?: boolean;
+}) {
+    return (
+        <Reveal>
+            <SpotlightCard className="group overflow-hidden border-primary/20">
+                <div className="grid grid-cols-1 md:grid-cols-2">
+                    <div className={`flex flex-col justify-center p-6 md:p-12 ${flip ? "order-2 md:order-1" : ""}`}>
+                        <div className="mb-4 flex items-center">
+                            {icon}
+                            <h2 className="text-3xl font-headline text-primary md:text-4xl">{title}</h2>
+                        </div>
+                        <p className="mt-4 font-body leading-relaxed text-muted-foreground">{description}</p>
+                    </div>
+                    <div className={`relative min-h-[300px] overflow-hidden md:min-h-full ${flip ? "order-1 md:order-2" : ""}`}>
+                        {image ? (
+                            <>
+                                <Image
+                                    src={image.imageUrl}
+                                    alt={image.altText}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                                    data-ai-hint={image.imageHint}
+                                />
+                                <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
+                            </>
+                        ) : (
+                            <div className="absolute inset-0 animate-pulse bg-muted/60" aria-hidden />
+                        )}
+                    </div>
+                </div>
+            </SpotlightCard>
+        </Reveal>
+    );
+}
+
+function SectionIntro({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+    return (
+        <Reveal className="mb-12 text-center">
+            <span className="glass mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl">{icon}</span>
+            <h2 className="text-3xl font-headline text-primary md:text-4xl">{title}</h2>
+            <p className="mx-auto mt-2 max-w-2xl text-balance text-lg text-muted-foreground">{description}</p>
+        </Reveal>
+    );
+}
+
 export default function HistoryPage() {
     const { images } = useImages();
     const originsImage = images?.find(img => img.id === origins.imageId);
     const ideologyImage = images?.find(img => img.id === ideology.imageId);
     const challengesImage = images?.find(img => img.id === challenges.imageId);
 
-
     return (
-        <div className="bg-background min-h-screen">
+        <div className="min-h-screen">
             <div className="container mx-auto px-4 py-16">
-                <div className="text-center mb-16">
-                    <h1 className="text-5xl md:text-6xl font-headline text-primary mb-4">Historical Context</h1>
-                    <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Understanding the roots, key personalities, and significant milestones of the ruling party.
-                    </p>
-                </div>
+                <PageHeader
+                    eyebrow="Since 1963"
+                    title="Historical Context"
+                    description="Understanding the roots, key personalities, and significant milestones of the ruling party."
+                />
 
                 <section className="mb-20">
-                    <Card className="overflow-hidden shadow-xl border-primary/20">
-                        <div className="grid grid-cols-1 md:grid-cols-2">
-                             <div className="p-6 md:p-12 flex flex-col justify-center">
-                                <div className="flex items-center mb-4">
-                                    {origins.icon}
-                                    <h2 className="text-3xl md:text-4xl font-headline text-primary">{origins.title}</h2>
-                                </div>
-                                <p className="font-body text-muted-foreground leading-relaxed mt-4">
-                                    {origins.description}
-                                </p>
-                            </div>
-                            <div className="relative min-h-[300px] md:min-h-full">
-                                {originsImage && (
-                                    <Image
-                                        src={originsImage.imageUrl}
-                                        alt={originsImage.altText}
-                                        fill
-                                        className="object-cover"
-                                        data-ai-hint={originsImage.imageHint}
-                                    />
-                                )}
-                            </div>
-                        </div>
-                    </Card>
+                    <FeatureCard icon={origins.icon} title={origins.title} description={origins.description} image={originsImage} />
                 </section>
 
                 <section className="mb-20">
-                    <div className="text-center mb-12">
-                        <Users className="w-12 h-12 text-accent mx-auto mb-4" />
-                        <h2 className="text-3xl md:text-4xl font-headline text-primary">Key Figures</h2>
-                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-2">
-                            The architects and pioneers who shaped the party&apos;s journey.
-                        </p>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {keyFigures.map((figure) => {
-                             const figureImage = images?.find(img => img.id === figure.imageId);
-                             return (
-                                <Card key={figure.name} className="text-center shadow-lg hover:shadow-2xl transition-shadow duration-300 border-primary/20">
-                                    <CardHeader>
-                                        {figureImage && (
-                                            <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden border-4 border-accent">
-                                            <Image
-                                                src={figureImage.imageUrl}
-                                                alt={figureImage.altText}
-                                                fill
-                                                className="object-cover"
-                                                data-ai-hint={figureImage.imageHint}
-                                            />
+                    <SectionIntro
+                        icon={<Users className="h-8 w-8 text-accent" />}
+                        title="Key Figures"
+                        description="The architects and pioneers who shaped the party's journey."
+                    />
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+                        {keyFigures.map((figure, index) => {
+                            const figureImage = images?.find(img => img.id === figure.imageId);
+                            return (
+                                <Reveal key={figure.name} delay={index * 120} className="h-full">
+                                    <SpotlightCard className="group h-full border-primary/20 text-center">
+                                        <CardHeader>
+                                            <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-accent shadow-xl shadow-accent/20 transition-transform duration-500 group-hover:rotate-2 group-hover:scale-105 md:h-40 md:w-40">
+                                                {figureImage ? (
+                                                    <Image
+                                                        src={figureImage.imageUrl}
+                                                        alt={figureImage.altText}
+                                                        fill
+                                                        sizes="160px"
+                                                        className="object-cover"
+                                                        data-ai-hint={figureImage.imageHint}
+                                                    />
+                                                ) : (
+                                                    <div className="absolute inset-0 animate-pulse bg-muted/60" aria-hidden />
+                                                )}
                                             </div>
-                                        )}
-                                    </CardHeader>
-                                    <CardContent>
-                                        <CardTitle className="font-headline text-xl md:text-2xl text-primary">{figure.name}</CardTitle>
-                                        <CardDescription className="font-body text-base text-muted-foreground mt-2">{figure.description}</CardDescription>
-                                    </CardContent>
-                                </Card>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <CardTitle className="font-headline text-xl text-primary md:text-2xl">{figure.name}</CardTitle>
+                                            <CardDescription className="mt-2 font-body text-base text-muted-foreground">{figure.description}</CardDescription>
+                                        </CardContent>
+                                    </SpotlightCard>
+                                </Reveal>
                             );
                         })}
                     </div>
                 </section>
 
                 <section className="mb-20">
-                    <div className="text-center mb-12">
-                        <Milestone className="w-12 h-12 text-accent mx-auto mb-4" />
-                        <h2 className="text-3xl md:text-4xl font-headline text-primary">Historical Milestones</h2>
-                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-2">
-                            Pivotal moments that defined the party and the nation.
-                        </p>
-                    </div>
+                    <SectionIntro
+                        icon={<Milestone className="h-8 w-8 text-accent" />}
+                        title="Historical Milestones"
+                        description="Pivotal moments that defined the party and the nation."
+                    />
                     <div className="space-y-8">
-                        {milestones.map((milestone) => {
+                        {milestones.map((milestone, index) => {
                             const milestoneImage = images?.find(img => img.id === milestone.imageId);
                             return (
-                                <Card key={milestone.year} className="overflow-hidden shadow-lg border-primary/20 hover:shadow-xl transition-shadow duration-300">
-                                    <div className="grid grid-cols-1 md:grid-cols-3">
-                                        <div className="relative min-h-[200px] md:min-h-full">
-                                            {milestoneImage && (
-                                                <Image src={milestoneImage.imageUrl} alt={milestoneImage.altText} fill className="object-cover" data-ai-hint={milestoneImage.imageHint} />
-                                            )}
+                                <Reveal key={milestone.year} direction={index % 2 === 0 ? "left" : "right"}>
+                                    <SpotlightCard className="group overflow-hidden border-primary/20">
+                                        <div className="grid grid-cols-1 md:grid-cols-3">
+                                            <div className="relative min-h-[200px] overflow-hidden md:min-h-full">
+                                                {milestoneImage ? (
+                                                    <Image
+                                                        src={milestoneImage.imageUrl}
+                                                        alt={milestoneImage.altText}
+                                                        fill
+                                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                                                        data-ai-hint={milestoneImage.imageHint}
+                                                    />
+                                                ) : (
+                                                    <div className="absolute inset-0 animate-pulse bg-muted/60" aria-hidden />
+                                                )}
+                                            </div>
+                                            <div className="p-6 md:col-span-2">
+                                                <span className="inline-block rounded-full bg-accent px-3 py-0.5 font-ui text-sm font-bold text-accent-foreground">
+                                                    {milestone.year}
+                                                </span>
+                                                <h3 className="mt-2 text-2xl font-headline text-primary">{milestone.title}</h3>
+                                                <p className="mt-2 font-body leading-relaxed text-muted-foreground">{milestone.description}</p>
+                                            </div>
                                         </div>
-                                        <div className="md:col-span-2 p-6">
-                                            <p className="text-accent font-bold font-headline text-lg">{milestone.year}</p>
-                                            <h3 className="text-2xl font-headline text-primary mt-1">{milestone.title}</h3>
-                                            <p className="text-muted-foreground font-body mt-2 leading-relaxed">{milestone.description}</p>
-                                        </div>
-                                    </div>
-                                </Card>
+                                    </SpotlightCard>
+                                </Reveal>
                             );
                         })}
                     </div>
                 </section>
 
-                 <section className="mb-20">
-                    <Card className="overflow-hidden shadow-xl border-primary/20">
-                        <div className="grid grid-cols-1 md:grid-cols-2">
-                             <div className="p-6 md:p-12 flex flex-col justify-center">
-                                <div className="flex items-center mb-4">
-                                    {ideology.icon}
-                                    <h2 className="text-3xl md:text-4xl font-headline text-primary">{ideology.title}</h2>
-                                </div>
-                                <p className="font-body text-muted-foreground leading-relaxed mt-4">
-                                    {ideology.description}
-                                </p>
-                            </div>
-                            <div className="relative min-h-[300px] md:min-h-full">
-                                {ideologyImage && (
-                                    <Image
-                                        src={ideologyImage.imageUrl}
-                                        alt={ideologyImage.altText}
-                                        fill
-                                        className="object-cover"
-                                        data-ai-hint={ideologyImage.imageHint}
-                                    />
-                                )}
-                            </div>
-                        </div>
-                    </Card>
+                <section className="mb-20">
+                    <FeatureCard icon={ideology.icon} title={ideology.title} description={ideology.description} image={ideologyImage} />
                 </section>
 
                 <section>
-                    <Card className="overflow-hidden shadow-xl border-primary/20">
-                        <div className="grid grid-cols-1 md:grid-cols-2">
-                             <div className="p-6 md:p-12 flex flex-col justify-center order-2 md:order-1">
-                                <div className="flex items-center mb-4">
-                                    {challenges.icon}
-                                    <h2 className="text-3xl md:text-4xl font-headline text-primary">{challenges.title}</h2>
-                                </div>
-                                <p className="font-body text-muted-foreground leading-relaxed mt-4">
-                                    {challenges.description}
-                                </p>
-                            </div>
-                            <div className="relative min-h-[300px] md:min-h-full order-1 md:order-2">
-                                {challengesImage && (
-                                    <Image
-                                        src={challengesImage.imageUrl}
-                                        alt={challengesImage.altText}
-                                        fill
-                                        className="object-cover"
-                                        data-ai-hint={challengesImage.imageHint}
-                                    />
-                                )}
-                            </div>
-                        </div>
-                    </Card>
+                    <FeatureCard icon={challenges.icon} title={challenges.title} description={challenges.description} image={challengesImage} flip />
                 </section>
             </div>
         </div>
     );
 }
-
-    
