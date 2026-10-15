@@ -35,3 +35,13 @@ Firestore security rules live in [`firestore.rules`](firestore.rules): all colle
 ```bash
 firebase deploy --only firestore:rules
 ```
+
+## National heroes data
+
+Profiles in the heroes section are generated from a compiled archive rather than hand-written:
+
+- [`src/data/heroes-archive.json`](src/data/heroes-archive.json) holds one record per hero (dates, places, roles, education, a short summary and dated events, all written in our own words from the published guide *A Guide to Heroes Acre*). A value is only filled in when the source states it. `verification.partial` marks records whose source pages were hard to read; their profile pages show a "still being reviewed" note.
+- [`src/data/heroes-archive.ts`](src/data/heroes-archive.ts) types that file, and [`src/data/hero-profiles.ts`](src/data/hero-profiles.ts) turns it (plus the original hand-written profile in `heroes.ts`) into the shape the pages render, including a light index for the directory so full profiles are never sent to the browser.
+- `/national-heroes` is the searchable directory and `/national-heroes/[id]` is a profile page (statically generated).
+
+To add or correct a hero, edit `heroes-archive.json` (keep `order` and `id` unique) and the pages pick it up.
