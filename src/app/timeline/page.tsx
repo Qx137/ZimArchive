@@ -16,6 +16,7 @@ const timelineData = [
     title: "Birth and Early Life",
     description: "Born in Zvishavane on September 15, 1942. His family later relocated to Zambia in the 1950s under pressure from colonial rule.",
     imageId: "timeline-1",
+    imagePosition: "50% 10%",
   },
   {
     year: "1960s",
@@ -28,6 +29,7 @@ const timelineData = [
     title: "Rise in ZANU",
     description: "Appointed by Robert Mugabe as Head of Civil and Military Affairs for ZANU, becoming a key strategist in the liberation war.",
     imageId: "timeline-3",
+    imagePosition: "50% 0%",
   },
   {
     year: "1980-2013",
@@ -40,12 +42,14 @@ const timelineData = [
     title: "First Vice President",
     description: "Appointed as First Vice President of Zimbabwe, positioning him as a potential successor to President Mugabe.",
     imageId: "timeline-5",
+    imagePosition: "50% 25%",
   },
   {
     year: "2017",
     title: "Inauguration as President",
     description: "After a brief period of exile, he returned to Zimbabwe and was sworn in as the second Executive President on November 24, 2017, following the resignation of Robert Mugabe.",
     imageId: "timeline-6",
+    imagePosition: "50% 20%",
   },
   {
     year: "2018",
@@ -157,13 +161,14 @@ export default function TimelinePage() {
                   >
                     <SpotlightCard className="group overflow-hidden border-primary/20">
                       {timelineImage ? (
-                        <div className="relative h-48 w-full overflow-hidden">
+                        <div className="relative h-56 w-full overflow-hidden md:h-64">
                           <Image
                             src={timelineImage.imageUrl}
                             alt={timelineImage.altText}
                             fill
                             sizes="(max-width: 768px) 90vw, 45vw"
                             className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                            style={{ objectPosition: item.imagePosition }}
                             data-ai-hint={timelineImage.imageHint}
                           />
                           <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
@@ -172,7 +177,7 @@ export default function TimelinePage() {
                           </span>
                         </div>
                       ) : (
-                        <div className="h-48 w-full animate-pulse bg-muted/60" aria-hidden />
+                        <div className="h-56 w-full animate-pulse bg-muted/60 md:h-64" aria-hidden />
                       )}
                       <CardHeader className="pb-2">
                         <CardTitle className="font-headline text-xl text-primary md:text-2xl">
