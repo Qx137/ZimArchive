@@ -2,6 +2,17 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
+  // Keep redirects non-permanent: browsers and Cloudflare cache 301/308 indefinitely,
+  // which made the old /national-heroes redirect linger after it was removed.
+  async redirects() {
+    return [
+      {
+        source: '/history',
+        destination: '/',
+        permanent: false,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
