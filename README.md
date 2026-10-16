@@ -45,3 +45,13 @@ Profiles in the heroes section are generated from a compiled archive rather than
 - `/national-heroes` is the searchable directory and `/national-heroes/[id]` is a profile page (statically generated).
 
 To add or correct a hero, edit `heroes-archive.json` (keep `order` and `id` unique) and the pages pick it up.
+
+## Gallery and timeline images
+
+The gallery, timeline and history pages read their pictures from local files, not from Firestore or other websites:
+
+- Image files live in [`public/images/archive/`](public/images/archive/).
+- [`src/data/archive-images.ts`](src/data/archive-images.ts) lists them (id, alt text, path, hint), and `useImages()` in [`src/hooks/use-images.ts`](src/hooks/use-images.ts) returns that list.
+- To add or replace a picture, put the file in `public/images/archive/` and add or edit its entry in `archive-images.ts`. A page simply skips an id that has no entry.
+- `gallery-airport-3` and `gallery-airport-4` have no picture: their original links died and no freely licensed photo of the new terminal exists yet.
+- Replacement pictures from Wikimedia Commons are credited in [`public/images/archive/CREDITS.md`](public/images/archive/CREDITS.md).

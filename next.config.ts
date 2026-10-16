@@ -13,18 +13,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-      {
-        protocol: 'http',
-        hostname: '**',
-      }
-    ],
-  },
   experimental: {
     // This is required for the dev environment to work correctly.
   },
