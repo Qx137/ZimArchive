@@ -88,21 +88,31 @@ function fromArchive(h: ArchiveHero): HeroProfile {
   };
 }
 
-function fromLegacy(h: Hero): HeroProfile {
-  const hasDeathYear = h.deathDate && /\d{4}/.test(h.deathDate);
+/**
+ * The original hand-written profile. When the compiled archive also has a record for the same
+ * person, that record only supplies facts the hand-written one lacks (death date, burial) so the
+ * hero is not listed twice.
+ */
+function fromLegacy(h: Hero, archive?: ArchiveHero): HeroProfile {
+  const legacyDeath = h.deathDate && /\d{4}/.test(h.deathDate) ? h.deathDate : undefined;
+  const died = legacyDeath ?? join(archive?.died, archive?.deathPlace);
+  const deathYear = yearOf(legacyDeath) ?? archive?.deathYear ?? undefined;
+  const burial = join(archive?.burialPlace, archive?.burialDate);
   const facts: HeroProfile["facts"] = [
     { label: "Born", value: join(h.birthDate, h.placeOfOrigin) },
-    ...(hasDeathYear ? [{ label: "Died", value: h.deathDate as string }] : []),
+    ...(died ? [{ label: "Died", value: died }] : []),
+    ...(burial ? [{ label: "Burial", value: burial }] : []),
     ...(h.residence ? [{ label: "Residence", value: h.residence }] : []),
     { label: "Family", value: join(h.maritalStatus, h.children) },
   ];
+  const birthYear = yearOf(h.birthDate);
   return {
     id: h.id,
     order: 0,
     name: h.fullName,
     honorific: "Cde",
-    lifespan: lifespan(yearOf(h.birthDate), hasDeathYear ? yearOf(h.deathDate) : undefined) ?? (yearOf(h.birthDate) ? `b. ${yearOf(h.birthDate)}` : undefined),
-    deathYear: hasDeathYear ? yearOf(h.deathDate) : undefined,
+    lifespan: lifespan(birthYear, deathYear) ?? (birthYear ? `b. ${birthYear}` : undefined),
+    deathYear,
     badges: ["Liberation fighter", "Diplomat"],
     summary: h.summary,
     facts,
@@ -118,9 +128,12 @@ function fromLegacy(h: Hero): HeroProfile {
   };
 }
 
-const profiles: HeroProfile[] = [...heroesData.map(fromLegacy), ...archiveHeroes.map(fromArchive)].sort(
-  (a, b) => a.order - b.order
-);
+const legacyIds = new Set(heroesData.map((h) => h.id));
+
+const profiles: HeroProfile[] = [
+  ...heroesData.map((h) => fromLegacy(h, archiveHeroes.find((a) => a.id === h.id))),
+  ...archiveHeroes.filter((a) => !legacyIds.has(a.id)).map(fromArchive),
+].sort((a, b) => a.order - b.order);
 
 export function getAllProfiles(): HeroProfile[] {
   return profiles;
